@@ -1,11 +1,15 @@
 <template>
+  <div id="services-banner">
+    <img src="../assets/images/Screenshot 2022-07-18 161013_transparent.png
+    " id="services-banner-img" alt="">
+  </div>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <div class="main-hero">
       <div class="main-hero-content">
-        <h1> Affordable <span>House</span>Painting in Phoenix Arizona</h1>
+        <h1> Affordable House Painting in Phoenix Arizona</h1>
         <p>We provide quality painting services for residential, commercial, or business projects at a reasonable price.</p>
-        <ButtonComponent msg="Book Appointment" fullBtn="false" class="btn"/>
+          <ButtonComponent msg="Book Appointment" fullBtn="false" class="btn"/>
       </div>
     </div>
     <div class="gallery-section">
@@ -13,21 +17,23 @@
         <h4 style="font-weight: 500;">Quality Paint, Affordable Price.</h4>
         <h6 style="font-weight: 200;">Our featured work</h6>
       </div>
-        <GalleryComponent />
+        <GalleryMin />
     </div>
   </div>
+
+  
 </template>
 
 <script>
 // @ is an alias to /src
 import ButtonComponent from '@/components/ButtonComponent.vue'
-import GalleryComponent from '@/components/GalleryComponent.vue'
+import GalleryMin from '@/components/GalleryMin.vue'
 
 export default {
   name: 'HomeView', 
   components: {
     ButtonComponent, 
-    GalleryComponent
+    GalleryMin
   }
 }
 
@@ -36,6 +42,7 @@ export default {
 //   // const itemsCollection = mongo.db("assets").collection("paint-jobs");
   
 // }
+
 </script>
 
 <style>
@@ -46,6 +53,9 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .btn {
@@ -53,14 +63,17 @@ export default {
   }
 
   .main-hero-content {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
-    left: 10%;
+    left: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 40%;
     color: white;
     text-align: left;
     /* margin-top: 20px; */
-    border: 1px solid grey;
   }
 
   h1 {
@@ -72,17 +85,16 @@ export default {
   }
 
   .gallery-section {
-    margin-top: 5px;
-    border: 1px solid green;
-    height: fit-content;
-    padding: 20px 10% 0;
-    color: white;
-    background-color: var(--brown);
-    padding-top: 6%;
+    background: linear-gradient(var(--light-blue), var(--darker-blue));
   }
 
-  .gallery-header {
-    text-align: left;
+  .services-banner {
+    /* height: 100%; */
+    /* overflow: auto; */
+  }
+
+  #services-banner-img {
+    /* height: 100vh; */
   }
 
 </style>

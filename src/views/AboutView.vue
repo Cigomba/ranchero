@@ -23,12 +23,24 @@
       <p>We value hardwork, empathy, and quality. Hardwork gets the job done, empathy helps us relate and attend to the needs of our customers, and quality brings customer satisfaction.</p>
     </div>
 
+    <div class="">
+      <h3>Follow us on social media for more!</h3>
+      <SocialComponent />
+    </div>
+
 
 
   </div>
 </template>
-<script setup>
+<script>
+import SocialComponent from '../components/SocialComponent.vue';
 
+export default {
+  name: 'AboutView',
+  components: {
+    SocialComponent
+  }
+}
 </script>
 <style>
 #img {
@@ -49,6 +61,12 @@
   border: 1px solid;
 }
 
+.background {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;;
+}
+
 h1, h3, h6 {
   text-align: left;
   padding: 20px 10%;
@@ -56,7 +74,11 @@ h1, h3, h6 {
 
 p {
   text-align: left;
-  padding: 20px 10%;  
+  padding: 0px 10%;  
+  /* margin: 0px; */
 }
 
+.about {
+  padding-bottom: 50%;
+}
 </style>
