@@ -24,6 +24,9 @@
     </nav>
   </header>
   <router-view/>
+  <div class="footer">
+    <p>Copyrighted 2024</p>
+  </div>
 </template>
 
 <style>
@@ -38,6 +41,7 @@
   --purple: #453b6b;
   --light-blue: #79BBCB;
   --darker-blue: #39636F;
+  --yellow: #ffc728;
 }
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
@@ -157,15 +161,19 @@ header {
   border-bottom: none !important;
 }
 
+.contact-us-btn:hover {
+ cursor: pointer; 
+}
+
 #right-nav {
   display: flex;
+  justify-content: space-around;
   gap: 20px;
 }
 
-.router-link-exact-active {
+.router-link-active {
   border-bottom: 1.5px solid var(--light-green);
   padding-bottom: 3px;
-  
 }
 
 </style>

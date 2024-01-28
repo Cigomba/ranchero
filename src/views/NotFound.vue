@@ -1,8 +1,8 @@
 <template>
     <div class="container" >
-        <img alt="" :src="this.imageUrl" v-if="this.imageUrl !== null">
+        <img alt="" :src="imageUrl" v-if="imageUrl !== null">
         <div  class="page_info" href="" >
-            <div class="404">
+            <div class="div">
                 <h1>404</h1>
                 <p>Your page request was not found.</p>
             </div>
@@ -10,7 +10,7 @@
     </div>
         
         <div id="unsplash" v-if="this.imageUrl !== null">
-            <a :href="this.imageUrl" target="_blank">Photo</a> by <a :href="this.creatorUrl" target="_blank"> {{ this.creator }}</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+            <a :href="this.imageUrl" target="_blank">Photo</a> by <a :href="this.creatorUrl" target="_blank"> {{ creator }}</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>
         </div>
     </template>
 
@@ -68,7 +68,7 @@
         justify-content: center;
     }
     
-    img {
+    .container img {
         width: 100%;
         height: 100vh;
         object-fit: cover;
@@ -100,5 +100,9 @@
 
     a:link {
         text-decoration: none;
+    }
+
+    .div{
+        padding: 20px 0;
     }
 </style>

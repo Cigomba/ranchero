@@ -1,7 +1,9 @@
 <template>
-  <div id="services-banner">
-    <img src="../assets/images/Screenshot 2022-07-18 161013_transparent.png
-    " id="services-banner-img" alt="">
+  <div class="main-home">
+
+    <div id="home-banner">
+      <img src="../assets/images/Screenshot 2022-07-18 161013_transparent.png
+      " id="home-banner-img" alt="">
   </div>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
@@ -9,7 +11,7 @@
       <div class="main-hero-content">
         <h1> Affordable House Painting in Phoenix Arizona</h1>
         <p>We provide quality painting services for residential, commercial, or business projects at a reasonable price.</p>
-          <ButtonComponent msg="Book Appointment" fullBtn="false" class="btn"/>
+        <ButtonComponent msg="Book Appointment" fullBtn="false" class="btn"/>
       </div>
     </div>
     <div class="gallery-section">
@@ -17,9 +19,23 @@
         <h4 style="font-weight: 500;">Quality Paint, Affordable Price.</h4>
         <h6 style="font-weight: 200;">Our featured work</h6>
       </div>
-        <GalleryMin />
+      <GalleryMin />
+    </div>
+    <CustomerReview />
+    <TalkProjectComponent />
+    <FAQComponent />
+    <div class="footer">
+      <FooterComponent />
+      <div class="bottom-footer">
+        <p>&copy; Copyright 2024 - Rancheropainting.com</p>
+        <div>
+          <a href="">Privacy Policy</a>
+          <a href="">Terms and Conditions</a>
+        </div>
+      </div>
     </div>
   </div>
+</div>
 
   
 </template>
@@ -28,12 +44,20 @@
 // @ is an alias to /src
 import ButtonComponent from '@/components/ButtonComponent.vue'
 import GalleryMin from '@/components/GalleryMin.vue'
+import CustomerReview from '@/components/CustomerReview.vue'
+import TalkProjectComponent from '@/components/TalkProjectComponent.vue'
+import FAQComponent from '@/components/FAQComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 
 export default {
   name: 'HomeView', 
   components: {
     ButtonComponent, 
-    GalleryMin
+    GalleryMin,
+    CustomerReview,
+    TalkProjectComponent,
+    FAQComponent,
+    FooterComponent
   }
 }
 
@@ -45,10 +69,26 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
+.main-home {
+}
+
+#home-banner {
+    /* width: 100%; */
+    /* height: auto; */
+    /* height: 100vh; */
+    /* overflow: auto; */
+  }
+
+  #home-banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
   .main-hero {
     background-image: url(../assets/images/pexels-tima-miroshnichenko-6474300.jpg);
-    height: 50vh;
+    height: 650px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,14 +98,7 @@ export default {
     justify-content: center;
   }
 
-  .btn {
-    margin-top: 20px !important;
-  }
-
   .main-hero-content {
-    /* position: absolute;
-    top: 50%;
-    left: 50%; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,28 +106,35 @@ export default {
     width: 40%;
     color: white;
     text-align: left;
-    /* margin-top: 20px; */
+  }
+  
+  .main-hero-content .btn {
+    margin-top: 20px !important;
   }
 
-  h1 {
-    margin-top: 15px;
-  }
   .main-hero-content * {
     /* gap: 50px; */
     padding: 10px;
   }
 
   .gallery-section {
-    background: linear-gradient(var(--light-blue), var(--darker-blue));
+    /* background: linear-gradient(var(--light-blue), var(--darker-blue)); */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    padding: 90px 10%;
+    /* padding: 90px 10% 0; */
+    color: white;
+    background-color: var(--brown);
+
   }
 
-  .services-banner {
-    /* height: 100%; */
-    /* overflow: auto; */
+  .gallery-header {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+    /* padding: 50px; */
   }
-
-  #services-banner-img {
-    /* height: 100vh; */
-  }
-
 </style>

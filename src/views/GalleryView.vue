@@ -1,8 +1,10 @@
 <template>
     <div class="gallery">
-      <h1>Gallery</h1>
-      <p>View our work for yourself. We are not shy to show you!</p>
-      <GalleryComponent />
+      <div class="titles">
+        <h1>Gallery</h1>
+        <p>View our work for yourself. We are not shy to show you!</p>
+      </div>
+      <GalleryComponent class="comp"/>
     </div>
 </template>
 <script>
@@ -14,4 +16,11 @@ export default {
 }
 
 </script>
-<style></style>
+<style>
+  .titles {
+    text-align: left;
+    margin: 0 10%;
+  }
+
+  
+</style>

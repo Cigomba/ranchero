@@ -1,15 +1,34 @@
 <template>
         <form action="" class="form">
             <h3 id="title">Contact Us</h3>
-            <input type="text" placeholder="Enter your name" />
-            <input type="email" id="email" placeholder="Email Address"/>
-            <input type="phone" id="phone" placeholder="Phone Number"/>
-            <textarea name="" id="textarea" rows="10" cols="30" placeholder="Message"></textarea>
-            <input type="submit" value="Submit" id="submit-btn"/>
+            <div class="input-container">
+                <i class="fa-solid fa-user"> </i>
+                <input type="text" placeholder="Enter your name" />
+            </div>
+
+            <div class="input-container">
+                <i class="fa fa-envelope"></i>
+                <input type="email" id="email" placeholder="Email Address"/>
+            </div>
+            <div class="input-container">
+                <i class="fa fa-phone"></i>
+                <input type="phone" id="phone" placeholder="Phone Number"/>
+            </div>
+            <div class="input-container" id="message-container">
+                <i class="fa-solid fa-message"></i>
+                <textarea name="" id="textarea" rows="10" cols="30" placeholder="What would you like us to know?"></textarea>
+            </div>
+                <input type="submit" value="Submit" id="submit-btn" @click="(el) => { console.log(el);}"/>
         </form>
 </template>
 
 <script>
+
+export default {
+    mounted () {
+    }
+}
+
 
 </script>
 
@@ -29,10 +48,14 @@
     input, textarea {
         width: 100%;
         padding: 10px;
+        border: none;
+        outline: none;
     }
     
     #textarea {
-        width: 100%;
+        box-sizing: border-box;
+        /* width: 100% !important; */
+        /* border: 1px solid orange; */
     }
 
     label {
@@ -65,4 +88,24 @@
         background-color: var(--light-green);
     }
 
+    .input-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0 10px;
+        /* color: white; */
+        background: white;
+        width: 100%;   
+    }
+
+    #message-container {
+        align-items: start;
+        /* padding-right: 0px !important; */
+        border: 1px solid green;
+    }
+
+    #message-container i {
+        padding-top:11px;
+    }
 </style>

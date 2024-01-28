@@ -1,6 +1,6 @@
 <template>
       <div class="contact-us-container">
-           <div class="contact-us-left-side">
+           <div class="contact-us-text">
                <h1>Contact Us</h1>
                <p>If you have any questions, comments, or concerns, or if you'd like to request a quote, please get in touch with us by using the contact form. Thank you.</p>
            </div>
@@ -27,10 +27,15 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
   }
 
-  .contact-us-left-side {
-    width: 700px;
+  .contact-us-text {
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
   }
 
 

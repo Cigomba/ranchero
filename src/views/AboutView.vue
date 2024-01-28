@@ -28,28 +28,31 @@
       <SocialComponent />
     </div>
 
-
-
   </div>
 </template>
 <script>
 import SocialComponent from '../components/SocialComponent.vue';
 
 export default {
+  data () {
+    return {}
+  },
   name: 'AboutView',
   components: {
     SocialComponent
+  },
+  mounted () {
+    
   }
 }
 </script>
-<style>
+<style scoped>
 #img {
   display: block;
   max-width: 100vw;
   /* width: 1000px; */
   height: auto;
   /* vertical-align: middle; */
-
 }
 
 .banner {

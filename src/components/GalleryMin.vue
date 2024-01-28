@@ -1,54 +1,101 @@
 <template>
-    <div class="gallery-section">
-      <div class="gallery-header">
-        <h4 style="font-weight: 500;">Quality Paint, Affordable Price.</h4>
-        <h6 style="font-weight: 200;">Our featured work</h6>
+  <!-- <div>
+        <ul>
+          <li v-for="(image, index) in images" :key="image.id" :ref="(el) => (imgElements[index] = el)"> -->
+            <!-- <img src="#" alt=""> -->
+          <!-- {{ image }} -->
+          <!-- {{ index }}
+          </li>
+        </ul>
+    </div> -->
+
+    <div class="gallery-min">
+            <div class="img-container">
+                <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.18 PM.jpeg" id="img1" alt="">
+            </div>
+            <div class="img-container">
+                <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" id="img1" alt="">
+            </div>
+            <div class="img-container">
+                <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.26.12 PM.jpeg" id="img1" alt="">
+            </div>
+            <div class="img-container">
+                <img src="../assets/images/WhatsApp Image 2022-05-10 at 2.54.48 PM.jpeg" id="img1" alt="">
+            </div>
+            <div class="img-container">
+                <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(1).jpeg" id="img1" alt="">
+            </div>
+            <div class="img-container">
+                <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(2).jpeg" id="img1" alt="">
+            </div>
+            <div class="img-container">
+              <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(4).jpeg" id="img1" alt="">
+            </div>
+            <div class="img-container">
+              <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(3).jpeg" id="img1" alt="">
+            </div>
+            <div class="img-container last-img" id="last-img">
+              <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(3).jpeg" id="img1" alt="">
+              <button id="more-btn">More Gallery <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
       </div>
-        <!-- <GalleryMin /> -->
-    </div>
 </template>
 
 <script>
-import { createApi } from 'unsplash-js';
 
-
-// const photos = [];
-
-const unsplash = createApi({
-    accessKey: 'lT97a1LrKNpbrpoQ_QlqrWa_8SmU60nod18nC3KhhWs'
-})
-
-export default {
-    data(){
-        return {
-            photos: []
-        }
-    },
-    mounted () {
-        unsplash.search.getPhotos({ query: "green", orientation: "landscape"})
-        .then(response => {
-            console.log(response.response.results)
-            this.photos = response.response.results;
-        })
-    }
-}
 </script>
 
-<style>
+<style scoped>
 
-
-.gallery-section {
-    margin-top: 5px;
-    border: 1px solid green;
-    height: fit-content;
-    padding: 20px 10% 0;
-    color: white;
-    background-color: var(--brown);
-    padding-top: 6%;
+  img {
+    /* max-width: 300px; */
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .gallery-min {
+    /* max-width: 50%; */
+    max-width: fit-content;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
-  .gallery-header {
-    text-align: left;
+  .last-img {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }  
+
+  .last-img img:hover {
+    /* filter: brightness(30%); */
+    cursor: pointer;
+  }
+.last-img:hover {
+
+}
+
+  #more-btn {
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    /* top: 50%;
+    left: 28%; */
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: var(--brown);
+    /* align-self: center; */
+  }
+  
+  #more-btn:hover {
+    cursor: pointer;
+    /* transform: scale(1.2); */
   }
 
 </style>

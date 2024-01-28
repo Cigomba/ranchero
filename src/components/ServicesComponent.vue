@@ -1,59 +1,127 @@
 <template>
     <div class="services-container">
 
-        <div class="services-inner-container">
-            <div class="services-inner">
-                <div class="services-inner-front">
-                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
+        <div class="services-service-main">
+            <div class="services-service-card">
+                <div class="services-service-front">
+                    <div class="services-service-front-text">
+                        <h2>Bedrooms</h2>
+                        <a>Starting at $175</a>
+                    </div>
                 </div>
-                <div class="services-inner-back">
-                    <h2>Bedrooms</h2>
-                    <a>Starting at $175</a>
+                <div class="services-service-back">
+                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
                 </div>
             </div>
         </div>
-        <div>
-            <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
-            <h2>Family/living room</h2>
-            <button>Starting at $250</button>
+        <div class="services-service-main">
+            <div class="services-service-card">
+                <div class="services-service-front make-yellow">
+                    <div class="services-service-front-text">
+                        <h2>Family/living room</h2>
+                        <a>Starting at $250</a>
+                    </div>
+                </div>
+                <div class="services-service-back">
+                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
-            <h2>Kitchen</h2>
-            <button>Starting at $175</button>
+        <div class="services-service-main">
+            <div class="services-service-card">
+                <div class="services-service-front">
+                    <div class="services-service-front-text">
+                        <h2>Kitchen</h2>
+                        <a>Starting at $175</a>
+                    </div>
+                </div>
+                <div class="services-service-back">
+                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
-            <h2>Bathrooms</h2>
-            <button>Starting at $125</button>
+        <div class="services-service-main">
+            <div class="services-service-card">
+                <div class="services-service-front make-yellow">
+                    <div class="services-service-front-text">
+                        <h2>Bathrooms</h2>
+                        <a>Starting at $125</a>
+                    </div>
+                </div>
+                <div class="services-service-back">
+                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
-            <h2>Closets</h2>
-            <button>Starting at $65</button>
+        <div class="services-service-main">
+            <div class="services-service-card">
+                <div class="services-service-front">
+                    <div class="services-service-front-text">
+                        <h2>Closets</h2>
+                        <a>Starting at $65</a>
+                    </div>
+                </div>
+                <div class="services-service-back">
+                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
-            <h2>Hallway</h2>
-            <button>Starting at $85</button>
+        <div class="services-service-main">
+            <div class="services-service-card">
+                <div class="services-service-front make-yellow">
+                    <div class="services-service-front-text">
+                        <h2>Hallway</h2>
+                        <a>Starting at $85</a>
+                    </div>
+                </div>
+                <div class="services-service-back">
+                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
-            <h2>Dining room</h2>
-            <button>Starting at $175</button>
+        <div class="services-service-main">
+            <div class="services-service-card">
+                <div class="services-service-front">
+                    <div class="services-service-front-text">
+                        <h2>Dining Room</h2>
+                        <a>Starting at $175</a>
+                    </div>
+                </div>
+                <div class="services-service-back">
+                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
-            <h2>Stairways</h2>
-            <button>Starting at $150</button>
+        <div class="services-service-main">
+            <div class="services-service-card">
+                <div class="services-service-front make-yellow">
+                    <div class="services-service-front-text">
+                        <h2>Stairways</h2>
+                        <a>Starting at $150</a>
+                    </div>
+                </div>
+                <div class="services-service-back">
+                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
+                </div>
+            </div>
         </div>
-        <div>
-            <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
-            <h2>Foyer</h2>
-            <button>Starting at $125</button>
+        <div class="services-service-main">
+            <div class="services-service-card">
+                <div class="services-service-front">
+                    <div class="services-service-front-text">
+                        <h2>Foyer</h2>
+                        <a>Starting at $125</a>
+                    </div>
+                </div>
+                <div class="services-service-back">
+                    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="gallery-img" alt="">
+                </div>
+            </div>
         </div>
 </div>
-<p>Visit our Facebook page for more information</p>
+<div>
+    <p>Visit our Facebook page for more information</p>
+</div>
 </template>
 <script>
 
@@ -66,54 +134,69 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 30px;
     flex-wrap: wrap;
-    border: 1px solid black;
-}
-.gallery-img {
-    /* width: 300px; */
-    object-fit: cover;
-    /* perspective:  */
-    backface-visibility: hidden;
-    background: linear-gradient();
+    /* border: 1px solid black; */
 }
 
-
-
-.services-inner-container {
+.services-service-main {
     position: relative;
     width: 300px;
-    height: 65px;
-    perspective: 1000px;
+    height: 320px;
+    /* background: green; */
 }
 
-.services-inner {
+.services-service-card {
     position: absolute;
     width: 100%;
     height: 100%;
-    transition: transform 0.8s;
     transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    /* background: yellow; */
 }
 
-.services-inner-container:hover .services-inner {
+.services-service-card:hover {
     transform: rotateY(-180deg);
-    border: 1px solid black;
+
 }
 
-.services-inner-front, .services-inner-back {
+.services-service-front {
     position: absolute;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background: linear-gradient(var(--light-blue), var(--darker-blue))
-    /* background-image: url(../assets/images/pexels-roman-zorge-19358420.jpg); */
+    background: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.services-inner-back {
-    /* background: linear-gradient(var(--light-green), var(--darker-green));
-    color: #fff; */
-    /* transform: rotateY(180deg); */
+.services-service-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: #ffc728;
+    color: #333;
+    transform: rotateY(180deg);
+    overflow: hidden;
 }
 
+.services-service-front-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+}
+
+.make-yellow {
+    background: var(--yellow);
+}
+
+.services-service-back img {
+    width: 100%;
+} 
 
 </style>s

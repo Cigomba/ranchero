@@ -7,9 +7,6 @@
     <h3 class="sub-paragraph">We wanted to share our prices with you. It makes getting a quote simple and easy!</h3>
   </div>
   <ServicesComponent />
-  <div class="services-img-container">
-    <img src="../assets/images/pexels-roman-zorge-19358420.jpg" class="services-img" alt="">
-  </div>
 </template>
 <script>
   import ServicesComponent from '../components/ServicesComponent.vue'
@@ -22,7 +19,8 @@
 <style>
   #services-banner {
     position: relative;
-    height: 20vh;
+    width: 100%;
+    height: 250px;
     overflow: hidden;
     border: 1px solid orange;
     /* background-image: url(../assets/images/WhatsApp\ Image\ 2022-07-18\ at\ 4.51.46\ PM\(2\).jpeg); */
