@@ -83,7 +83,7 @@ export default {
     
     #submit-btn:hover {
         cursor: pointer;
-        border: 1px solid var(--purple);
+        /* border: 1px solid var(--purple); */
         color: white;
         background-color: var(--light-green);
     }

@@ -118,7 +118,7 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 <div>
     <p>Visit our Facebook page for more information</p>
 </div>
@@ -127,7 +127,7 @@
 
 </script>
 
-<style>
+<style scoped>
 
 .services-container {
     display: flex;
@@ -136,6 +136,7 @@
     text-align: center;
     gap: 30px;
     flex-wrap: wrap;
+    margin: 0 10%;
     /* border: 1px solid black; */
 }
 
@@ -199,4 +200,11 @@
     width: 100%;
 } 
 
+@media screen and (width <= 400) {
+    .services-service-main {
+    position: relative;
+    width: 80px;
+    height: 100px;
+}
+}
 </style>s

@@ -7,13 +7,13 @@
   </div>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <div class="main-hero">
+    <!-- <div class="main-hero">
       <div class="main-hero-content">
         <h1> Affordable House Painting in Phoenix Arizona</h1>
         <p>We provide quality painting services for residential, commercial, or business projects at a reasonable price.</p>
         <ButtonComponent msg="Book Appointment" fullBtn="false" class="btn"/>
       </div>
-    </div>
+    </div> -->
     <div class="gallery-section">
       <div class="gallery-header">
         <h4 style="font-weight: 500;">Quality Paint, Affordable Price.</h4>
@@ -26,13 +26,7 @@
     <FAQComponent />
     <div class="footer">
       <FooterComponent />
-      <div class="bottom-footer">
-        <p>&copy; Copyright 2024 - Rancheropainting.com</p>
-        <div>
-          <a href="">Privacy Policy</a>
-          <a href="">Terms and Conditions</a>
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>
@@ -42,7 +36,7 @@
 
 <script>
 // @ is an alias to /src
-import ButtonComponent from '@/components/ButtonComponent.vue'
+// import ButtonComponent from '@/components/ButtonComponent.vue'
 import GalleryMin from '@/components/GalleryMin.vue'
 import CustomerReview from '@/components/CustomerReview.vue'
 import TalkProjectComponent from '@/components/TalkProjectComponent.vue'
@@ -52,7 +46,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
 export default {
   name: 'HomeView', 
   components: {
-    ButtonComponent, 
+    // ButtonComponent, 
     GalleryMin,
     CustomerReview,
     TalkProjectComponent,

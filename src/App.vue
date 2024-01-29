@@ -16,17 +16,21 @@
     </div>
       <nav id="right-nav">
         &nbsp;<router-link :to="{ name : 'get-a-quote' }" >
-            <button class="get-quote-btn btn">Get a Quote</button>
+            <button class="get-quote-btn btn">Book an Appointment</button>
         </router-link>
-        &nbsp;<router-link :to="{ name : 'contact-us' }" >
-            <button class="contact-us-btn btn" >Contact Us</button>
+        &nbsp;<router-link :to="{ name : 'get-a-quote' }" >
+            <button class="book-apt-btn" >Get a Quote</button>
         </router-link>
     </nav>
   </header>
   <router-view/>
-  <div class="footer">
-    <p>Copyrighted 2024</p>
-  </div>
+  <div class="bottom-footer">
+        <p>&copy; Copyright 2024 - Rancheropainting.com</p>
+        <div class="footer-rs">
+          <a href="">Privacy Policy</a>
+          <a href="">Terms and Conditions</a>
+        </div>
+      </div>
 </template>
 
 <style>
@@ -144,36 +148,56 @@ header {
   cursor: pointer;
   padding: 10px 20px;
   font-size: 18px;
-  /* color: var(--hover-green); */
-  color: var(--brown);
-
+  /* color: var(--purple); */
+  color: white;
+  
   /* background-color: var(--light-green); */
   /* border: 1px solid var(--hover-green); */
   border-radius: 3px;
 }
 
-.contact-us-btn {
+.book-apt-btn {
   padding: 10px 20px;
   font-size: 18px;
   background-color: var(--light-green);
   border-radius: 3px;
   color: white;
   border-bottom: none !important;
+  border: none;
+  margin-right: 10px;
 }
 
-.contact-us-btn:hover {
- cursor: pointer; 
+.book-apt-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: var(--light-green);
+  border: 1px solid var(--light-green);
 }
 
 #right-nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
   gap: 20px;
 }
 
 .router-link-active {
   border-bottom: 1.5px solid var(--light-green);
   padding-bottom: 3px;
+}
+
+.bottom-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 10%;
+
+}
+
+.footer-rs {
+  display: flex;
+  gap: 20px;
 }
 
 </style>

@@ -1,12 +1,14 @@
 <template>
-  <div id="services-banner">
-    <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(2).jpeg" id="services-banner-img" alt="">
-    <h1 id="services-title">Services</h1>
+  <div class="services">
+    <div class="services-banner">
+      <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(2).jpeg" id="services-banner-img" alt="">
+      <h1 id="services-title">Services</h1>
+    </div>
+    <div class="services-header-text">
+      <h3>We wanted to share our prices with you. It makes getting a quote simple and easy!</h3>
+    </div>
+    <ServicesComponent />
   </div>
-  <div>
-    <h3 class="sub-paragraph">We wanted to share our prices with you. It makes getting a quote simple and easy!</h3>
-  </div>
-  <ServicesComponent />
 </template>
 <script>
   import ServicesComponent from '../components/ServicesComponent.vue'
@@ -16,42 +18,34 @@
     components: { ServicesComponent }
   }
 </script>
-<style>
-  #services-banner {
+<style scoped>
+
+  .services {
+  }
+
+  .services-banner {
     position: relative;
-    width: 100%;
-    height: 250px;
+    height: 25vh;
     overflow: hidden;
-    border: 1px solid orange;
     /* background-image: url(../assets/images/WhatsApp\ Image\ 2022-07-18\ at\ 4.51.46\ PM\(2\).jpeg); */
   }
 
   #services-title {
     position: absolute;
     top: 65%;
-    left: 10%;
+    left: calc(10% + 82px);
     color: white;
   }
 
-  .sub-paragraph {
-    margin-top: 20px;
-  }
-
-  .services-img-container {
-    width: 250px;
-    height: 250px;
-    border: 1px solid green;
-  }
-
-  .services-img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-
+  .services-header-text {
+    text-align: left;
+    margin: 0 10%;
+    margin-top: 80px;
+    padding-left: 82px;
+    margin-bottom: 40px;
   }
 
   #services-banner-img {
-    max-width: 100%;
-    border: 1px solid blue;
+    width: 100%;
   }
 </style>
