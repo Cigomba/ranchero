@@ -24,10 +24,6 @@
     <CustomerReview />
     <TalkProjectComponent />
     <FAQComponent />
-    <div class="footer">
-      <FooterComponent />
-      
-    </div>
   </div>
 </div>
 
@@ -41,7 +37,6 @@ import GalleryMin from '@/components/GalleryMin.vue'
 import CustomerReview from '@/components/CustomerReview.vue'
 import TalkProjectComponent from '@/components/TalkProjectComponent.vue'
 import FAQComponent from '@/components/FAQComponent.vue'
-import FooterComponent from '@/components/FooterComponent.vue'
 
 export default {
   name: 'HomeView', 
@@ -51,7 +46,6 @@ export default {
     CustomerReview,
     TalkProjectComponent,
     FAQComponent,
-    FooterComponent
   }
 }
 

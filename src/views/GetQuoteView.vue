@@ -61,8 +61,9 @@ export default {
 <style scoped>
   .main {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     margin-bottom: 50px;
   }
 
@@ -95,6 +96,7 @@ export default {
   
   .map {
     width: 100%;
+    margin-top: 20px;
   }
 
   .head-text {
@@ -103,10 +105,27 @@ export default {
     gap: 20px;
     align-items: center;
     justify-content: center;
+    padding: 10px;
     /* max-width: 500px; */
   }
 
   .head-text p {
-    width: 560px;
+    width: 500px;
   }
+
+  .right-side {
+    
+  }
+
+  @media screen and (width < 1100) {
+    .head-text {
+      padding: 10px;
+    }
+    .head-text p {
+      width: fit-content;
+    }
+    .right-side {
+      padding: 30px;
+    }
+}
 </style>

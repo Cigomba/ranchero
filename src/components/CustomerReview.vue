@@ -97,4 +97,8 @@ img {
 .see-more:hover {
     cursor: pointer;
 }
+
+@media screen and (width < 720px) {
+    
+}
 </style>

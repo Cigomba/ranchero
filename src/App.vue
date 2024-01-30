@@ -2,36 +2,39 @@
   <div class="topheader">
     
   </div>
-  <header>
+  <header class=".header">
     <div class="menu-nav">
       <router-link to="/">
         <img src="./assets/images/RancheroPainting_Logo_Horizontal.png" id="img">
       </router-link>
       <nav id="menu">
-          &nbsp;<router-link :to="{ name : 'about-ranchero' }">About Ranchero</router-link>
+          &nbsp;<router-link :to="{ name : 'about-ranchero' }" class="first">About Ranchero</router-link>
           &nbsp;<router-link :to="{ name : 'services' }">Services</router-link>
           &nbsp;<router-link :to="{ name : 'gallery' }">Gallery</router-link>
+          &nbsp;<router-link :to="{ name : 'testimonials' }" >Testimonials</router-link>
           &nbsp;<router-link :to="{ name : 'contact-us' }" >Contact Us</router-link>
       </nav>
     </div>
-      <nav id="right-nav">
+    <nav id="right-nav">
+        <!-- &nbsp;<router-link :to="{ name : 'get-a-quote' }" >
+            <button class="book-apt-btn btn">Book an Appointment</button>
+        </router-link> -->
         &nbsp;<router-link :to="{ name : 'get-a-quote' }" >
-            <button class="get-quote-btn btn">Book an Appointment</button>
-        </router-link>
-        &nbsp;<router-link :to="{ name : 'get-a-quote' }" >
-            <button class="book-apt-btn" >Get a Quote</button>
+            <button class="get-quote-btn btn" >Get a Quote</button>
         </router-link>
     </nav>
   </header>
   <router-view/>
-  <div class="bottom-footer">
-        <p>&copy; Copyright 2024 - Rancheropainting.com</p>
-        <div class="footer-rs">
-          <a href="">Privacy Policy</a>
-          <a href="">Terms and Conditions</a>
-        </div>
-      </div>
+  <FooterComponent />
 </template>
+
+<script>
+  import FooterComponent from './components/FooterComponent.vue';
+
+  export default {
+    components: { FooterComponent }
+  }
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Racing+Sans+One&family=Raleway&display=swap');
@@ -46,6 +49,7 @@
   --light-blue: #79BBCB;
   --darker-blue: #39636F;
   --yellow: #ffc728;
+  --main-blue: #2c3e50;
 }
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
@@ -64,19 +68,22 @@
 
 header {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: center;
-}
+  
+} 
 
 #img {
   /* border: 1px solid black; */
   /* object-fit: cover; */
   /* height: 100px !important; */
-  width: 250px;
+  max-width: 250px;
 }
 
 .menu-nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
@@ -84,26 +91,28 @@ header {
 
 #menu {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 #menu a {
   text-decoration: none;
   font-size: 17px;
   text-transform: uppercase;
-  color: var(--light-green)
+  color: var(--light-green);
 }
 
 #menu a:hover {
-  color: var(--hover-green);
-  transition: color 300ms ease-in-out;
+  color: var(--darker-blue);
+  transition: all 300ms ease-in;
 }
 
 .btn {
   position: relative;
 }
 
-.btn.get-quote-btn::before {
+.btn.book-apt-btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -118,23 +127,23 @@ header {
   transform-origin: left;
 }
 
-.btn.get-quote-btn {
+.btn.book-apt-btn {
   z-index: 1;
 }
 
-.btn.get-quote-btn:hover::before,
-.btn.get-quote-btn:focus::before {
+.btn.book-apt-btn:hover::before,
+.btn.book-apt-btn:focus::before {
   transform: scaleX(1);
 }
 
-.btn.get-quote-btn:hover::after,
-.btn.get-quote-btn:focus::after {
+.btn.book-apt-btn:hover::after,
+.btn.book-apt-btn:focus::after {
   transform: scaleX(0);
   z-index: -1;
 }
 
 
-.get-quote-btn {
+.book-apt-btn {
   padding: 10px 20px;
   font-size: 18px;
   color: var(--light-green);
@@ -144,7 +153,7 @@ header {
   text-transform: uppercase;
 }
 
-.get-quote-btn:hover {
+.book-apt-btn:hover {
   cursor: pointer;
   padding: 10px 20px;
   font-size: 18px;
@@ -156,51 +165,100 @@ header {
   border-radius: 3px;
 }
 
-.book-apt-btn {
+.get-quote-btn {
   padding: 10px 20px;
   font-size: 18px;
   background-color: var(--light-green);
   border-radius: 3px;
   color: white;
-  border-bottom: none !important;
   border: none;
-  margin-right: 10px;
 }
 
-.book-apt-btn:hover {
+.get-quote-btn:hover {
   cursor: pointer;
-  background-color: white;
-  color: var(--light-green);
-  border: 1px solid var(--light-green);
+  background-color: var(--darker-blue);
+  color: var(--yellow);
+  /* border: 1px solid var(--light-green); */
+  transition: all 0.3s ease;
 }
 
 #right-nav {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 10px;
-  gap: 20px;
-}
-
-.router-link-active {
-  border-bottom: 1.5px solid var(--light-green);
-  padding-bottom: 3px;
-}
-
-.bottom-footer {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 10px 10%;
-
+  align-items: center;
+  width: fit-content;
+  padding: 0 20px;
+  /* gap: 20px; */
 }
 
-.footer-rs {
-  display: flex;
-  gap: 20px;
+/* .router-link-active {
+  color: var(--darker-blue) !important;
+} */
+
+a.router-link-exact-active {
+  color: var(--darker-blue) !important;
+  /* border-bottom: 1.5px solid var(--darker-blue); */
+}
+
+a.router-link-exact-active:first-child {
+  border-bottom: none;
+}
+
+.get-quote-btn.router-link-exact-active {
+  background-color: var(--darker-blue);
+  color: var(--yellow);
+}
+
+@media screen and (width < 720px) {
+
+  .header {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+ 
+  .menu-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bottom-footer {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+@media screen and (width < 1100) {
+
+  /* // decrease size of header */
+  .header {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+
+  #menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  div img {
+    width: 100%;
+  }
+}
+
+@media screen and (width < 400) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .get-quote-btn {
+    padding: 0;
+    background-color: blue;
+  }
 }
 
 </style>
-<script setup>
-
-</script>

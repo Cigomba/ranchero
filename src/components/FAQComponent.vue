@@ -96,11 +96,14 @@ export default {
         flex-direction: column;
         gap: 30px;
     }
-
+    
     .qa-container {
         display: flex;
         flex-direction: column;
+        /* justify-content: left;
+        align-items: left; */
         gap: 30px;
+        /* margin: 0 auto; */
     }
 
     .question {

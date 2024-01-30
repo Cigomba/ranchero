@@ -6,6 +6,9 @@ import GalleryView from "../views/GalleryView.vue";
 import ContactUsView from "../views/ContactUsView.vue";
 import GetQuoteView from "../views/GetQuoteView.vue";
 import NotFound from "../views/NotFound.vue";
+import PrivacyPolicyView from "../views/PrivacyPolicyView.vue";
+import TermsConditionsView from "../views/TermsConditionsView.vue";
+import TestimonialsView from "../views/TestimonialsView.vue";
 
 const routes = [
 	{
@@ -37,6 +40,21 @@ const routes = [
 		path: "/get-a-quote",
 		name: "get-a-quote",
 		component: GetQuoteView,
+	},
+	{
+		path: "/tesimonials",
+		name: "testimonials",
+		component: TestimonialsView,
+	},
+	{
+		path: "/privacy-policy",
+		name: "privacy-policy",
+		component: PrivacyPolicyView,
+	},
+	{
+		path: "/terms-and-conditions",
+		name: "terms-and-conditions",
+		component: TermsConditionsView,
 	},
 	{
 		path: "/:catchAll(.*)",

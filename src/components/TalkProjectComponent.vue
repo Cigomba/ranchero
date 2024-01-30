@@ -45,4 +45,17 @@ span {
     border: none;
 }
 
+@media screen and (width < 720px) {
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding-top: 50px;
+    }
+
+    .contact {
+        /* width: 100%; */
+    }
+}
+
 </style>

@@ -1,31 +1,59 @@
 <template>
-        <form action="" class="form">
+        <form class="form" id="form">
             <h3 id="title">Contact Us</h3>
             <div class="input-container">
                 <i class="fa-solid fa-user"> </i>
-                <input type="text" placeholder="Enter your name" />
+                <input type="text" name="name" placeholder="Enter your name" />
             </div>
 
             <div class="input-container">
                 <i class="fa fa-envelope"></i>
-                <input type="email" id="email" placeholder="Email Address"/>
+                <input type="email" id="email" name="email" placeholder="Email Address"/>
             </div>
             <div class="input-container">
                 <i class="fa fa-phone"></i>
-                <input type="phone" id="phone" placeholder="Phone Number"/>
+                <input type="phone" id="phone" name="phone" placeholder="Phone Number"/>
             </div>
             <div class="input-container" id="message-container">
                 <i class="fa-solid fa-message"></i>
-                <textarea name="" id="textarea" rows="10" cols="30" placeholder="What would you like us to know?"></textarea>
+                <textarea id="message" name="message" rows="10" cols="30" placeholder="What would you like us to know?"></textarea>
             </div>
-                <input type="submit" value="Submit" id="submit-btn" @click="(el) => { console.log(el);}"/>
+                <input type="submit" value="Submit" id="submit-btn" @click="handleForm($event)"/>
         </form>
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
+const service_id = "service_1lyeejp";
+const template_id = "template_k6zzosm";
+const public_key = "MzSIdgg5HdqE-3xBi";
 
 export default {
     mounted () {
+        
+    },
+    created() {
+        
+        
+        emailjs.init(public_key);
+    },
+    methods: {
+        
+        handleForm(e) {
+            e.preventDefault();
+            // console.log(this.$el)
+            emailjs.sendForm(service_id, template_id, "#form");
+
+            // clear form
+            console.log(this.$el[0])
+            this.$el[0].value = '';
+            this.$el[1].value = '';
+            this.$el[2].value = '';
+            this.$el[3].value = '';
+
+            window.alert("Thank you for contacting us. We'll be in contact soon.")
+        }
     }
 }
 
@@ -101,8 +129,6 @@ export default {
 
     #message-container {
         align-items: start;
-        /* padding-right: 0px !important; */
-        border: 1px solid green;
     }
 
     #message-container i {

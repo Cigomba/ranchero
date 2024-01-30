@@ -86,4 +86,17 @@ a {
 }
 
 
+@media screen and (width < 720px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn {
+         width: 50%;
+    }
+
+}
 </style>
