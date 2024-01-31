@@ -28,6 +28,7 @@ export default {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    padding-bottom: 100px;
   }
 
   .contact-us-text {

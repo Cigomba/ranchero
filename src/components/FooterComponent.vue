@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="connect">
-            <p>Connect with Ranchero:</p>
+            <p class="connect-p">Connect with Ranchero:</p>
             <div class="icons">
                 <a href="">
                     <i class="fa fa-facebook fa-2x"></i>
@@ -55,6 +55,10 @@
 </script>
 
 <style scoped>
+* {
+    padding: 0;
+    margin: 0;
+}
 img {
     width: 250px;
 }
@@ -68,11 +72,11 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 10%;
+    padding: 60px 10%;
     background-color: var(--main-blue);
     color: white;
     text-align: left;
-    margin-top: 30px;
+
 }
 
 .inner-container {
@@ -97,17 +101,13 @@ a {
 .company, .location, .connect {
     display: flex;
     flex-direction: column;
-    /* gap: 20px; */
+    gap: 20px;
 }
 
 .location-info {
     display: flex;
     flex-direction: column;
-    /* gap: 5px; */
-}
-
-.location-info p  {
-    padding: 0 !important;
+    gap: 5px;
 }
 
 .icons {
@@ -123,13 +123,24 @@ a {
     color: none;
 }
 
+.icons a:first-child:hover {
+    color: rgb(0, 106, 148);
+}
+
+.icons a:nth-child(2):hover {
+    color: rgb(237, 82, 82);
+}
+
+.icons a:nth-child(3):hover {
+    color: green;
+}
 
 .bottom-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 10px 10%;
-  /* padding: 10px; */
+  padding: 20px;
 }
 
 .footer-rs {
@@ -137,6 +148,9 @@ a {
   gap: 20px;
 }
 
+.connect-p {
+    width: 100%;
+}
 
 @media screen and (width < 720px) {
     .footer-container {

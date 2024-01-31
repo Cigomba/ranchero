@@ -58,6 +58,7 @@ export default {
     
 }
 .gallery img {
+    width: 350px;
     max-width: fit-content;
     object-fit: cover;
     cursor: pointer;

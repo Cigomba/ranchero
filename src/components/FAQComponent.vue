@@ -87,6 +87,11 @@ export default {
 </script>
 
 <style scoped>
+
+* {
+    margin: 0;
+    padding: 0;
+}
     .faq-container {
         margin: 80px 10%;
         /* margin-top: 80px; */

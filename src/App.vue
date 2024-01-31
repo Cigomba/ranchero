@@ -15,7 +15,7 @@
           &nbsp;<router-link :to="{ name : 'contact-us' }" >Contact Us</router-link>
       </nav>
       <nav id="right-nav">
-              <a href="#" class="book-apt-btn btn" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cigombamiler-29w/30min'});return false;">Book an Appointment</a>
+              <a href="#" class="book-apt-btn" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cigombamiler-29w/30min'});return false;">Book an Appointment</a>
           &nbsp;<router-link :to="{ name : 'get-a-quote' }">
               <button class="get-quote-btn btn" @mouseleave="setActivated" >Get a Quote</button>
           </router-link>
@@ -69,6 +69,11 @@ import FooterComponent from './components/FooterComponent.vue';
   color: #2c3e50;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 header {
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +81,6 @@ header {
   align-items: center;
   gap: 10px;
   padding: 50px 50px;
-
 } 
 
 #img {
@@ -126,6 +130,10 @@ header {
   transform: scale(1.1);
 }
 
+a.book-apt-btn {
+  text-decoration: none;
+}
+
 .get-quote-btn {
   padding: 10px 20px;
   width: fit-content;
@@ -144,11 +152,6 @@ header {
   /* border: 1px solid var(--light-green); */
   /* transition: all 0.3s ease; */
   transform: scale(1.1);
-}
-
-.activatedBtn {
-  background-color: var(--darker-blue);
-  color: var(--yellow);
 }
 
 #right-nav {
