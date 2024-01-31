@@ -57,16 +57,18 @@ export default {
 
 </script>
 
+const url = const.
 <style scoped>
 .main-home {
 }
-
-#home-banner {
-    /* width: 100%; */
+/* 
+#home-banner { 
+  */
+    /* width: 90%; */
     /* height: auto; */
     /* height: 100vh; */
     /* overflow: auto; */
-  }
+  /* } */
 
   #home-banner-img {
     width: 100%;

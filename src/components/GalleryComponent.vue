@@ -1,74 +1,74 @@
 <template>
-    <div class="gallery-main grid js-masonry" data-masonry-options='{ "itemSelector": ".grid-item", "columnWidth": 300}'>
-            <div class="grid-item">
-                <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.26.12 PM.jpeg" id="img1" alt="">
-            </div>
-            <div class="grid-item">
-                <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.18 PM.jpeg" alt="" id="img2">
-            </div>
-            <div class="grid-item">
-                <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" alt="">
-            </div>
-            <div class="grid-item">
-                <img src="../assets/images/WhatsApp Image 2022-05-10 at 2.54.48 PM.jpeg" alt="" id="img3">
-            </div>
-            <div class="grid-item">
-                <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(1).jpeg" alt="">
-            </div>
-        <div class="grid-item">
-            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(2).jpeg" alt="">
+    <div class="gallery">
+        <a href="#" data-lightbox="mygallery">
+            <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.26.12 PM.jpeg" id="img1" alt="">
+        </a>
+        <a href="#" data-lightbox="mygaller">
+            <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.18 PM.jpeg" alt="" id="img2">
+        </a>
+        <a href="#" data-lightbox="mygallery">
+            <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" alt="" id="img3">
+        </a>
+        <a href="#" data-lightbox="mygallery">
+            <img src="../assets/images/WhatsApp Image 2022-05-10 at 2.54.48 PM.jpeg" alt="" id="img4">
+        </a>
+        <a href="#" data-lightbox="mygallery">
+            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(1).jpeg" id="img5" alt="">
+        </a>
+        <a href="#" data-lightbox="mygallery">
+            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(2).jpeg" id="img6" alt="">
+        </a>
+        <a href="#" data-lightbox="mygallery">
+            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(3).jpeg" id="img7" alt="">
+        </a>
+        <a href="#" data-lightbox="mygallery">
+            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(4).jpeg" data-lightbox="img8" id="img8" alt="">
+        </a>
+        <a href="#">
+            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM.jpeg" id="img9" alt="">
+        </a>
+        <!-- <div v-if="imageClicked"> -->
+            <!-- </div> -->
         </div>
-        <div class="grid-item">
-            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(3).jpeg" alt="">
-        </div>
-        <div class="grid-item">
-            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(4).jpeg" alt="">
-        </div>
-        <div class="grid-item">
-            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(4).jpeg" alt="">
-        </div>
-        <div class="grid-item">
-            <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM.jpeg" alt="">
-        </div> 
-    </div>
+        <GalleryModalComponent />
 </template>
 <script>
 
+import GalleryModalComponent from '../components/GalleryModalComponent.vue'
+
+export default {
+    data() {
+        return {};
+    },
+    components: {
+        GalleryModalComponent
+    }
+}
 
 </script>
 
-<style>
-
-.gallery-main {
+<style scoped>
+.gallery {
     padding: 50px 10%;
-    border: 1px solid green;
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     background-color: var(--brown);
     margin-top: 50px;
-
+    
 }
-
-.gallery-img-container {
-
-
-}
-
-.gallery-img-container img {
+.gallery img {
+    max-width: fit-content;
     object-fit: cover;
-}
-
-.gallery-img-container *:hover {
-    opacity: 0.8;
-    filter: blur(8px);
-}
-
-.gallery:hover {
     cursor: pointer;
+    filter: grayscale(50%);
+    transition: 0.8s;
 }
-
-.gallery-main * {
-    width: 300px;
+.gallery img:hover {
+    /* opacity: 0.8; */
+    filter: brightness(100%);
+    transform: scale(1.1);
+    /* filter: ; */
 }
 
 </style>

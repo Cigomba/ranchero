@@ -16,11 +16,11 @@
       </nav>
     </div>
     <nav id="right-nav">
-        <!-- &nbsp;<router-link :to="{ name : 'get-a-quote' }" >
-            <button class="book-apt-btn btn">Book an Appointment</button>
-        </router-link> -->
+        &nbsp;<router-link :to="{ name : 'book-appointment' }" >
+            <a href="" class="book-apt-btn btn" onclick=" () => {Calendly.initPopupWidget({url: 'https://calendly.com/cigombamiler-29w/30min'});return false;}">Book an Appointment</a>
+        </router-link>
         &nbsp;<router-link :to="{ name : 'get-a-quote' }" >
-            <button class="get-quote-btn btn" >Get a Quote</button>
+            <button class="get-quote-btn btn" ref="qtBtn" @mouseleave="setActivated" >Get a Quote</button>
         </router-link>
     </nav>
   </header>
@@ -29,10 +29,31 @@
 </template>
 
 <script>
-  import FooterComponent from './components/FooterComponent.vue';
+import FooterComponent from './components/FooterComponent.vue';
 
   export default {
-    components: { FooterComponent }
+    data() {
+      return {
+        
+      }
+    },
+    components: { FooterComponent },
+    methods: {
+      setActivated() {
+        const qouteBtn = this.$refs.qtBtn;
+        console.log(qouteBtn);
+        if (qouteBtn.parentElement.classList.contains("router-link-exact-active")) {
+          qouteBtn.classList.add("activatedBtn");
+          console.log('Activated class added')
+        }
+        if (qouteBtn.classList.contains("activatedBtn")) {
+          qouteBtn.classList.remove("activatedBtn");
+        }
+      }
+    },
+    mounted() {
+      
+    }
   }
 </script>
 
@@ -150,7 +171,7 @@ header {
   background-color: white;
   border: 1px solid var(--light-green);
   border-radius: 3px;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .book-apt-btn:hover {
@@ -182,6 +203,11 @@ header {
   transition: all 0.3s ease;
 }
 
+.activatedBtn {
+  background-color: var(--darker-blue);
+  color: var(--yellow);
+}
+
 #right-nav {
   display: flex;
   justify-content: space-between;
@@ -190,10 +216,6 @@ header {
   padding: 0 20px;
   /* gap: 20px; */
 }
-
-/* .router-link-active {
-  color: var(--darker-blue) !important;
-} */
 
 a.router-link-exact-active {
   color: var(--darker-blue) !important;
@@ -204,9 +226,10 @@ a.router-link-exact-active:first-child {
   border-bottom: none;
 }
 
-.get-quote-btn.router-link-exact-active {
+a.router-link-exact-active[href~=".get-quote-btn"] {
   background-color: var(--darker-blue);
   color: var(--yellow);
+
 }
 
 @media screen and (width < 720px) {

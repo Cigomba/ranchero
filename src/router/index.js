@@ -9,6 +9,7 @@ import NotFound from "../views/NotFound.vue";
 import PrivacyPolicyView from "../views/PrivacyPolicyView.vue";
 import TermsConditionsView from "../views/TermsConditionsView.vue";
 import TestimonialsView from "../views/TestimonialsView.vue";
+import BookAppointmentView from "../views/BookAppointmentView.vue";
 
 const routes = [
 	{
@@ -45,6 +46,11 @@ const routes = [
 		path: "/tesimonials",
 		name: "testimonials",
 		component: TestimonialsView,
+	},
+	{
+		path: "/book-appointment",
+		name: "book-appointment",
+		component: BookAppointmentView,
 	},
 	{
 		path: "/privacy-policy",
