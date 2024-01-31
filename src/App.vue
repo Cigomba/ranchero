@@ -16,10 +16,8 @@
       </nav>
     </div>
     <nav id="right-nav">
-        &nbsp;<router-link :to="{ name : 'book-appointment' }" >
-            <a href="" class="book-apt-btn btn" onclick=" () => {Calendly.initPopupWidget({url: 'https://calendly.com/cigombamiler-29w/30min'});return false;}">Book an Appointment</a>
-        </router-link>
-        &nbsp;<router-link :to="{ name : 'get-a-quote' }" >
+            <a href="#" class="book-apt-btn btn" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cigombamiler-29w/30min'});return false;">Book an Appointment</a>
+        &nbsp;<router-link :to="{ name : 'get-a-quote' }">
             <button class="get-quote-btn btn" ref="qtBtn" @mouseleave="setActivated" >Get a Quote</button>
         </router-link>
     </nav>
@@ -82,17 +80,13 @@ import FooterComponent from './components/FooterComponent.vue';
   color: #2c3e50;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  
+  gap:10px;
+
 } 
 
 #img {
@@ -129,61 +123,17 @@ header {
   transition: all 300ms ease-in;
 }
 
-.btn {
-  position: relative;
-}
-
-.btn.book-apt-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  background-color: var(--light-green);
-
-  transition: transform 300ms ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.btn.book-apt-btn {
-  z-index: 1;
-}
-
-.btn.book-apt-btn:hover::before,
-.btn.book-apt-btn:focus::before {
-  transform: scaleX(1);
-}
-
-.btn.book-apt-btn:hover::after,
-.btn.book-apt-btn:focus::after {
-  transform: scaleX(0);
-  z-index: -1;
-}
-
-
 .book-apt-btn {
+  background-color: var(--darker-blue);
+  color: var(--yellow);
   padding: 10px 20px;
-  font-size: 18px;
-  color: var(--light-green);
-  background-color: white;
-  border: 1px solid var(--light-green);
   border-radius: 3px;
-  text-transform: capitalize;
+  font-size: 18px;
 }
 
 .book-apt-btn:hover {
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 18px;
-  /* color: var(--purple); */
-  color: white;
-  
-  /* background-color: var(--light-green); */
-  /* border: 1px solid var(--hover-green); */
-  border-radius: 3px;
+  /* color: white; */
+  transform: scale(1.1);
 }
 
 .get-quote-btn {
@@ -197,10 +147,11 @@ header {
 
 .get-quote-btn:hover {
   cursor: pointer;
-  background-color: var(--darker-blue);
-  color: var(--yellow);
+  /* background-color: var(--darker-blue);
+  color: var(--yellow); */
   /* border: 1px solid var(--light-green); */
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
+  transform: scale(1.1);
 }
 
 .activatedBtn {
@@ -214,7 +165,7 @@ header {
   align-items: center;
   width: fit-content;
   padding: 0 20px;
-  /* gap: 20px; */
+  gap: 7px;
 }
 
 a.router-link-exact-active {
@@ -231,7 +182,7 @@ a.router-link-exact-active[href~=".get-quote-btn"] {
   color: var(--yellow);
 
 }
-
+/* 
 @media screen and (width < 720px) {
 
   .header {
@@ -239,6 +190,7 @@ a.router-link-exact-active[href~=".get-quote-btn"] {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-bottom: 30px !important;
   }
  
   .menu-nav {
@@ -250,15 +202,15 @@ a.router-link-exact-active[href~=".get-quote-btn"] {
     display: flex;
     gap: 10px;
   }
-}
+} */
 
-@media screen and (width < 1100) {
+@media screen and (width < 1142) {
 
   /* // decrease size of header */
   .header {
     display: flex;
     /* flex-direction: column; */
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   #menu {
@@ -268,6 +220,10 @@ a.router-link-exact-active[href~=".get-quote-btn"] {
 
   div img {
     width: 100%;
+  }
+
+  #right-nav {
+    padding-bottom: 100px !important;
   }
 }
 
