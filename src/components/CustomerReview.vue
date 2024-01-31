@@ -98,7 +98,4 @@ img {
     cursor: pointer;
 }
 
-@media screen and (width < 720px) {
-    
-}
 </style>

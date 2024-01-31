@@ -19,7 +19,7 @@
     }
 </script>
 
-<style>
+<style scoped>
 .project-container {
     display: flex;
     align-items: center;
@@ -45,12 +45,12 @@ span {
     border: none;
 }
 
-@media screen and (width < 720px) {
+@media screen and (width < 900px) {
     .project-container {
         display: flex;
         flex-direction: column;
         gap: 0;
-        padding-top: 50px;
+        padding: 50px 50px;
     }
 
     .contact {

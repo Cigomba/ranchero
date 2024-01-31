@@ -7,6 +7,6 @@
 <script setup>
 
 </script>
-<style lang="">
+<style scoped>
 
 </style>

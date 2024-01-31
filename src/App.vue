@@ -3,10 +3,10 @@
     
   </div>
   <header class=".header">
+    <router-link to="/">
+      <img src="./assets/images/RancheroPainting_Logo_Horizontal.png" id="img">
+    </router-link>
     <div class="menu-nav">
-      <router-link to="/">
-        <img src="./assets/images/RancheroPainting_Logo_Horizontal.png" id="img">
-      </router-link>
       <nav id="menu">
           &nbsp;<router-link :to="{ name : 'about-ranchero' }" class="first">About Ranchero</router-link>
           &nbsp;<router-link :to="{ name : 'services' }">Services</router-link>
@@ -14,13 +14,13 @@
           &nbsp;<router-link :to="{ name : 'testimonials' }" >Testimonials</router-link>
           &nbsp;<router-link :to="{ name : 'contact-us' }" >Contact Us</router-link>
       </nav>
+      <nav id="right-nav">
+              <a href="#" class="book-apt-btn btn" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cigombamiler-29w/30min'});return false;">Book an Appointment</a>
+          &nbsp;<router-link :to="{ name : 'get-a-quote' }">
+              <button class="get-quote-btn btn" @mouseleave="setActivated" >Get a Quote</button>
+          </router-link>
+        </nav>
     </div>
-    <nav id="right-nav">
-            <a href="#" class="book-apt-btn btn" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cigombamiler-29w/30min'});return false;">Book an Appointment</a>
-        &nbsp;<router-link :to="{ name : 'get-a-quote' }">
-            <button class="get-quote-btn btn" ref="qtBtn" @mouseleave="setActivated" >Get a Quote</button>
-        </router-link>
-    </nav>
   </header>
   <router-view/>
   <FooterComponent />
@@ -37,18 +37,7 @@ import FooterComponent from './components/FooterComponent.vue';
     },
     components: { FooterComponent },
     methods: {
-      setActivated() {
-        const qouteBtn = this.$refs.qtBtn;
-        console.log(qouteBtn);
-        if (qouteBtn.parentElement.classList.contains("router-link-exact-active")) {
-          qouteBtn.classList.add("activatedBtn");
-          console.log('Activated class added')
-        }
-        if (qouteBtn.classList.contains("activatedBtn")) {
-          qouteBtn.classList.remove("activatedBtn");
-        }
-      }
-    },
+      },
     mounted() {
       
     }
@@ -85,7 +74,8 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  gap:10px;
+  gap: 10px;
+  padding: 50px 50px;
 
 } 
 
@@ -107,7 +97,7 @@ header {
 #menu {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -138,6 +128,8 @@ header {
 
 .get-quote-btn {
   padding: 10px 20px;
+  width: fit-content;
+  text-wrap: nowrap;
   font-size: 18px;
   background-color: var(--light-green);
   border-radius: 3px;
@@ -181,63 +173,6 @@ a.router-link-exact-active[href~=".get-quote-btn"] {
   background-color: var(--darker-blue);
   color: var(--yellow);
 
-}
-/* 
-@media screen and (width < 720px) {
-
-  .header {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-bottom: 30px !important;
-  }
- 
-  .menu-nav {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .bottom-footer {
-    display: flex;
-    gap: 10px;
-  }
-} */
-
-@media screen and (width < 1142) {
-
-  /* // decrease size of header */
-  .header {
-    display: flex;
-    /* flex-direction: column; */
-    flex-wrap: nowrap;
-  }
-
-  #menu {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  div img {
-    width: 100%;
-  }
-
-  #right-nav {
-    padding-bottom: 100px !important;
-  }
-}
-
-@media screen and (width < 400) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-
-  .get-quote-btn {
-    padding: 0;
-    background-color: blue;
-  }
 }
 
 </style>

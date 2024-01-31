@@ -16,7 +16,7 @@ export default {
 }
 
 </script>
-<style>
+<style scoped>
   .titles {
     text-align: left;
     margin: 0 10%;

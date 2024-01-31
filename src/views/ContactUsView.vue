@@ -18,7 +18,7 @@ export default {
     components: { ContactForm }
 }
 </script>
-<style>
+<style scoped>
   .contact {
     /* border: 1px solid blue; */
   }

@@ -55,6 +55,15 @@
 </script>
 
 <style scoped>
+img {
+    width: 250px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
 .footer-container {
     display: flex;
     align-items: center;
@@ -63,7 +72,6 @@
     background-color: var(--main-blue);
     color: white;
     text-align: left;
-    gap: 30px;
     margin-top: 30px;
 }
 
@@ -89,13 +97,17 @@
 .company, .location, .connect {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    /* gap: 20px; */
 }
 
 .location-info {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    /* gap: 5px; */
+}
+
+.location-info p  {
+    padding: 0 !important;
 }
 
 .icons {
@@ -117,7 +129,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 10px 10%;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .footer-rs {

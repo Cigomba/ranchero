@@ -57,7 +57,7 @@ export default {
 
 </script>
 
-const url = const.
+<!-- const url = const. -->
 <style scoped>
 .main-home {
 }
