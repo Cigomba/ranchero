@@ -15,31 +15,31 @@
     </template>
 
 <script>
-    import { createApi } from 'unsplash-js';
+    // import { createApi } from 'unsplash-js';
     // on node server
-    const api = createApi(
-        {accessKey: 'lT97a1LrKNpbrpoQ_QlqrWa_8SmU60nod18nC3KhhWs',
+    // const api = createApi(
+    //     {accessKey: 'lT97a1LrKNpbrpoQ_QlqrWa_8SmU60nod18nC3KhhWs',
         // fetch: nodeFetch
-    })
+    // })
 
     export default {
         data() {
         return { 
-            imageUrl: null,
-            creator: null,
-            creatorUrl: null
+            // imageUrl: null,
+            // creator: null,
+            // creatorUrl: null
             // randomPhoto: null,
 
             }
         },
         async mounted() {
-            let response = await api.search.getPhotos({ query: 'paint', orientation: 'landscape'});
-            console.log(response)
-            const randomNum = Math.floor(Math.random()*9)
-            let data = response.response.results[randomNum];
-            this.imageUrl = data.urls.full;
-            this.creator = data.user.first_name;
-            this.creatorUrl = data.user.links.html;
+            // let response = await api.search.getPhotos({ query: 'paint', orientation: 'landscape'});
+            // console.log(response)
+            // const randomNum = Math.floor(Math.random()*9)
+            // let data = response.response.results[randomNum];
+            // this.imageUrl = data.urls.full;
+            // this.creator = data.user.first_name;
+            // this.creatorUrl = data.user.links.html;
 
             // let res = await api.
             // console.log(res)
