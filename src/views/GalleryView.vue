@@ -4,7 +4,9 @@
         <h1>Gallery</h1>
         <p>View our work for yourself. We are not shy to show you!</p>
       </div>
-      <GalleryComponent class="comp"/>
+      <div class="comp">
+        <GalleryComponent />
+      </div>
     </div>
 </template>
 <script>
@@ -17,10 +19,18 @@ export default {
 
 </script>
 <style scoped>
-  .titles {
-    text-align: left;
-    margin: 0 10%;
+.gallery {
+  margin-top: 50px;
+}
+
+.titles {
+  text-align: left;
+}
+
+.comp {
+    padding: 0 10%;
+    width: 100%;
+    background-color: var(--brown);
   }
 
-  
 </style>

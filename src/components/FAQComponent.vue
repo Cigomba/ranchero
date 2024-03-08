@@ -94,8 +94,11 @@ export default {
 }
     .faq-container {
         margin: 80px 10%;
+        text-align: left;
+        /* border: 1px solid green; */
         /* margin-top: 80px; */
         display: flex;
+        place-items: center;
         flex-direction: column;
         gap: 30px;
     }
@@ -103,6 +106,9 @@ export default {
     .qa-container {
         display: flex;
         flex-direction: column;
+        justify-self: center;
+        /* border: 1px solid green; */
+        width: 500px;
         /* justify-content: left;
         align-items: left; */
         gap: 30px;
@@ -119,14 +125,14 @@ export default {
     .question:hover {
         cursor: pointer;
     }
-    
+
     .answer {
         display: none;
         text-align: left;
         margin-left: 31px;
         transition: all 1s ease-in-out;
     }
-    
+
     ul {
         list-style-type: none;
     }
@@ -135,6 +141,12 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 15px;
+    }
+
+    @media screen and (max-width: 500px) {
+        .qa-container {
+            max-width: fit-content;
+        }
     }
 
 </style>

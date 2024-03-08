@@ -4,7 +4,7 @@
             <h1>Ready to start your <span>project</span>?</h1>
             <p>Fill in the form or give us a call.</p>
         </div>
-        <div>
+        <div class="contact_container">
             <ContactForm class="contact"/>
         </div>
     </div>
@@ -21,15 +21,19 @@
 
 <style scoped>
 .project-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background-color: #333;
+    place-items: center;
 }
 
 .text-container {
     color: white;
+}
+
+.contact_container {
+    width: 100%;
+    /* min-width: 100%; */
 }
 
 img {
@@ -45,16 +49,17 @@ span {
     border: none;
 }
 
-@media screen and (width < 900px) {
+@media screen and (max-width: 900px) {
     .project-container {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        padding: 50px 50px;
+        grid-template-columns: 1fr;
+        padding: 50px 0px;
     }
 
-    .contact {
+    .contact_container {
         /* width: 100%; */
+    }
+    .contact {
+        min-width: 200px;
     }
 }
 

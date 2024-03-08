@@ -5,11 +5,10 @@
         <h3>RANCHERO PAINTING</h3>
         
         <h1>Get a Quote</h1>
-        <p>If you want to get started, please reach out to us to get a quote. The fastest way to do so is with a quick phone call to our phone number. We can also book you an appointment so you can see about how much everything is gonna cost.</p>
+        <p>If you want to get started, please reach out to us to get a quote. You can call us at (602) 123-4567 or fill in the form below. We can also book you an appointment so you can see about how much everything is gonna cost.</p>
       </div>
       
       <div class="contact-info-container">
-        
         <div class="contact-info" id="first-contact">
           <div class="contact-info-titles">
             <i class="fa fa-clock"></i>
@@ -21,8 +20,7 @@
           <div class="contact-info-titles">
             <i class="fa fa-bell"></i>
             <h4>Online Booking</h4>
-          </div>
-          <p>Coming soon</p>
+          </div>                                                                                                                                    
         </div>
         <div class="contact-info">
           <div class="contact-info-titles">
@@ -30,20 +28,21 @@
             <h4>Email</h4>
           </div>
           <p>Rancheropainting@gmail.com</p>
-        </div>
+                                                                                                                                                                                                                                                                                                                                                          </div>
             <div class="contact-info">
               <div class="contact-info-titles">
                 <i class="fa fa-location" ></i>
                 <h4>Location</h4>
               </div>
               <p>
-              <a href="https://maps.app.goo.gl/RGzabGLw4riW6V9r7">16609 E desmet Ct Spokane Valley, WA 99216</a>
+              <a class="link"  target="_blank" href="https://maps.app.goo.gl/RGzabGLw4riW6V9r7">16609 E desmet Ct Spokane Valley, WA 99216
+              </a>
             </p>
         </div>
       </div>
     </div>
+    
     <div class="right-side">
-      
       <ContactForm class="contact-form"/>
       <!-- <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.26.12 PM.jpeg" id="img"/> -->
     </div>
@@ -60,17 +59,38 @@ export default {
 </script>
 <style scoped>
   .main {
+    margin: 50px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
+    place-items: center;
+    gap: 50px;
+    padding-bottom: 100px;
+    margin-left: 15%;
+  }
+  
+  .link {
+    color: white;
   }
 
   .left-side {
+    max-width: 400px;
     display: flex;
     flex-direction: column;
-    width: 700px;
+    /* border: 2px solid salmon; */
+    
+  }
+  
+  .contact-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* place-items: center; */
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+    /* border: 2px solid salmon; */
+    /* align-items: flex-start; */
+
   }
 
   .contact-info {
@@ -78,8 +98,12 @@ export default {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: fit-content;
     gap: 5px;
-    padding: 20px 0;
+    padding: 20px;
+    background-color: var(--main-blue);
+    border-radius: 3px;
+    color: white;
     /* border: 1px solid black; */
   }
 
@@ -106,26 +130,67 @@ export default {
     align-items: center;
     justify-content: center;
     padding: 10px;
-    /* max-width: 500px; */
   }
 
   .head-text p {
-    width: 500px;
+    max-width: 500px;
+    text-align: left;
+
+    /* width: fit-content; */
   }
 
-  .right-side {
+  .contact-form {
+    /* min-width: 50%; */
+    /* max-width: 75%; */
+    margin: 0 auto;
+    border-radius: 0;
+  }
+
+  .contact-form .input-container {
+    /* width: 50px; */
+  }
+
+  @media screen and (max-width: 900px) {
+    .main {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
     
-  }
+    .left-side {
+      width: 100%;
+      padding: 5%;
+    }
 
-  @media screen and (width < 1100) {
+    .right-side {
+      /* padding: 30px; */
+      width: 100%;
+    }
+    .contact-form {
+      width: 100%;
+    }
     .head-text {
       padding: 10px;
     }
     .head-text p {
       width: fit-content;
     }
-    .right-side {
-      padding: 30px;
-    }
+}
+
+@media screen and (max-width: 1100px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
+  }
+
+  .left-side {
+    max-width: fit-content;
+  }
+
+  .right-side {
+    width: 100%;
+  }
+
 }
 </style>

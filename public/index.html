@@ -7,9 +7,10 @@
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
       <script src="https://kit.fontawesome.com/bb8d7d04f7.js" crossorigin="anonymous"></script>
       <!-- <script src="jquery-3.7.1.min.js"></script> -->
-      <link href="/node_modules/lightbox2/dist/css/lightbox.css" />
+      <!-- <link href="/node_modules/lightbox2/dist/css/lightbox.css" /> -->
       <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/cigombamiler-29w', text: 'Schedule time with me', color: '#C3BF6D', textColor: '#ffffff', branding: true }); }</script>
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -18,6 +19,6 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    <script src="/node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
+    <!-- <script src="/node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script> -->
   </body>
 </html>

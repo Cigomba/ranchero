@@ -1,13 +1,13 @@
 <template>
   <div class="main-home">
 
-    <div id="home-banner">
+    <div class="home-banner">
       <img src="../assets/images/Screenshot 2022-07-18 161013_transparent.png
-      " id="home-banner-img" alt="">
+      " class="home-banner-img" alt="">
   </div>
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <!-- <div class="main-hero">
+      <!-- <div class="main-hero">
       <div class="main-hero-content">
         <h1> Affordable House Painting in Phoenix Arizona</h1>
         <p>We provide quality painting services for residential, commercial, or business projects at a reasonable price.</p>
@@ -27,7 +27,6 @@
   </div>
 </div>
 
-  
 </template>
 
 <script>
@@ -46,6 +45,10 @@ export default {
     CustomerReview,
     TalkProjectComponent,
     FAQComponent,
+  },
+  mounted() {
+    // console.log(this.$refs.gc);
+
   }
 }
 
@@ -60,21 +63,20 @@ export default {
 <!-- const url = const. -->
 <style scoped>
 .main-home {
-}
-/* 
-#home-banner { 
-  */
-    /* width: 90%; */
-    /* height: auto; */
-    /* height: 100vh; */
-    /* overflow: auto; */
-  /* } */
 
-  #home-banner-img {
+}
+
+.home-banner { 
+  /* border: 2px solid ; */
+  overflow: hidden;
+}
+
+.home-banner-img {
     width: 100%;
     height: auto;
     object-fit: contain;
-  }
+    transform: scale(1.075);
+}
 
   .main-hero {
     background-image: url(../assets/images/pexels-tima-miroshnichenko-6474300.jpg);
@@ -98,6 +100,7 @@ export default {
     text-align: left;
   }
   
+
   .main-hero-content .btn {
     margin-top: 20px !important;
   }
@@ -111,7 +114,7 @@ export default {
     /* background: linear-gradient(var(--light-blue), var(--darker-blue)); */
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     height: fit-content;
     padding: 90px 10%;
     /* padding: 90px 10% 0; */
@@ -125,6 +128,8 @@ export default {
     flex-direction: column;
     gap: 5px;
     text-align: left;
+    padding-left: 35px;
     /* padding: 50px; */
   }
+
 </style>

@@ -9,10 +9,10 @@
         </div>
     </div>
         
-        <div id="unsplash" v-if="this.imageUrl !== null">
-            <a :href="this.imageUrl" target="_blank">Photo</a> by <a :href="this.creatorUrl" target="_blank"> {{ creator }}</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>
-        </div>
-    </template>
+    <div id="unsplash" v-if="this.imageUrl !== null">
+        <a :href="this.imageUrl" target="_blank">Photo</a> by <a :href="this.creatorUrl" target="_blank"> {{ creator }}</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a>
+    </div>
+</template>
 
 <script>
     // import { createApi } from 'unsplash-js';
@@ -29,7 +29,6 @@
             // creator: null,
             // creatorUrl: null
             // randomPhoto: null,
-
             }
         },
         async mounted() {

@@ -1,19 +1,21 @@
 <template>
     <div class="footer-container">
-        <div>
-            <img src="../assets/images/RancheroPainting_Logo_Horizontal.png" alt="">
-        </div>
+        <router-link :to="{ name : 'home'}" >
+            <div>
+                <img src="../assets/images/RancheroPainting_Logo_Horizontal.png" alt="">
+            </div>
+            </router-link>
         <div class="inner-container">
 
             <div class="company">
                 <h6>Company</h6>
                 <div class="links">
-                <a href="/about-ranchero">Our Story</a>
-                <a href="/services">Services</a>
-                <a href="/gallery">Gallery</a>
-                <a href="/contact-us">Contact Us</a>
+                    <router-link :to="{ name : 'about-ranchero' }" class="first">About Ranchero</router-link>
+                    <router-link :to="{ name : 'services' }">Services</router-link>
+                    <router-link :to="{ name : 'gallery' }">Gallery</router-link>
+                    <router-link :to="{ name : 'contact-us' }" >Contact Us</router-link>
+                </div>
             </div>
-        </div>
         <div class="location">
             <h6>Location</h6>
             <div class="location-info">
@@ -26,13 +28,13 @@
             <p class="connect-p">Connect with Ranchero:</p>
             <div class="icons">
                 <a href="">
-                    <i class="fa fa-facebook fa-2x"></i>
+                    <i class="fa fa-facebook fa-3x"></i>
                 </a>
                 <a href="">
-                    <i class="fa fa-instagram fa-2x"></i>
+                    <i class="fa fa-instagram fa-3x"></i>
                 </a>
                 <a href="">
-                    <i class="fa fa-whatsapp fa-2x"></i>
+                    <i class="fa fa-whatsapp fa-3x"></i>
                 </a>
             </div>
         </div>
@@ -59,6 +61,7 @@
     padding: 0;
     margin: 0;
 }
+
 img {
     width: 250px;
 }
@@ -69,35 +72,49 @@ a {
 
 
 .footer-container {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 10%;
-    background-color: var(--main-blue);
     color: white;
-    text-align: left;
-
+    padding: 60px 10%;
+    text-align: left; */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    background-color: #C3BF6D;
+    padding-bottom: 20px;
+    
+    /* border-top: 1px solid var(--light-blue); */
 }
 
 .inner-container {
     display: flex;
-    /* align-items: center; */
-    justify-content: space-between;
-    align-items: top;
-    gap: 100px;
+    place-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: flex-start;
 }
 
 .links {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    text-wrap: nowrap;
+    white-space: nowrap;
     overflow: hidden;
 }
 
 .links a {
-    color: white;
+    color: var(--main-blue);
 }
+
+.links a:hover {
+    text-decoration: underline;
+}
+
 .company, .location, .connect {
     display: flex;
     flex-direction: column;
@@ -113,7 +130,7 @@ a {
 .icons {
     display: flex;
     gap: 50px;
-    color: white;
+    /* color: white; */
 }
 
 .icons a {
@@ -152,19 +169,30 @@ a {
     width: 100%;
 }
 
-@media screen and (width < 720px) {
+@media screen and (max-width: 720px) {
     .footer-container {
-        display: flex;
+        /* display: flex;
         text-align: center;
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap; */
+
     }
+
     
     .inner-container {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 500px;
+        /* display: flex;
+        
         text-align: center;
-        justify-content: center;
-        flex-wrap: wrap;    
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap:  */
+    }
+
+    .company, .location, .connect {
+        gap: 0px;
     }
 }
 

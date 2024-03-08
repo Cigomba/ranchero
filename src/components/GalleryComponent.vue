@@ -53,8 +53,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    background-color: var(--brown);
-    margin-top: 50px;
+    /* background-color: var(--brown); */
     
 }
 .gallery img {

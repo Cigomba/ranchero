@@ -31,7 +31,9 @@
         </div>
 
         <div class="tracking"></div>
-            <a class="see-more">See More Customer Reviews</a>
+            <router-link class="see-more" :to="{ name : 'testimonials'}">
+                See More Customer Reviews
+            </router-link>
     </div>
 </template>
 <script>
@@ -47,33 +49,41 @@ img {
     border-radius: 5px;
 }
 
-.review-block img:hover {
-
-}
 .review-container {
     padding: 90px 10%;
 }
 
 .reviews-block {
-    margin-top: 70px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     gap: 200px;
+    /* border: 1px solid gray; */
 }
+
 .titles {
-    padding: 10px;
     text-align: left;
+    /* width: 200px; */
 }
 
 .review-block {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 80px;
+    gap: 50px;
+
 }
 
+.review-block:nth-of-type(odd) {
+    align-self: flex-start;
+}
+.review-block:nth-of-type(even) {
+    align-self: flex-end;
+}
+
+
 .review-titles {
-    width: 400px;
+    min-width: 200px;
     /* color: white; */
     display: flex;
     flex-direction: column;
@@ -87,15 +97,29 @@ img {
 }
 
 .see-more {
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
-    background-color: var(--light-blue);
+    background-color: var(--this-green);
     border-radius: 3px;
-    /* color: white; */
+    color: white;
+    text-decoration: none;
+}
+
+.see-more a {
+
 }
 
 .see-more:hover {
     cursor: pointer;
+    /* box-shadow: 0px 0px 4px var(--this-green); */
+}
+
+@media only screen and (max-width: 900px) {
+    .titles {
+        width: 150px;
+        
+    }
+
 }
 
 </style>

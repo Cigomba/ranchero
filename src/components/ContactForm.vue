@@ -1,6 +1,6 @@
 <template>
         <form class="form" id="form">
-            <h3 id="title">Contact Us</h3>
+            <h3 id="title">Connect with Us</h3>
             <div class="input-container">
                 <i class="fa-solid fa-user"> </i>
                 <input type="text" name="name" placeholder="Enter your name" />
@@ -75,6 +75,7 @@ export default {
     }
     input, textarea {
         width: 100%;
+        min-width: 50%;
         padding: 10px;
         border: none;
         
@@ -102,12 +103,13 @@ export default {
 
     #submit-btn {
         border-radius: 3px;
-        color: var(--purple);
-        background-color: white;
-        width: 100% !important;
+        color: white;
+        /* width: 100% !important; */
         border: none;
         font-size: 18px;
         text-transform: uppercase;
+        background-color: white;
+        color: var(--purple);
     }
     
     #submit-btn:hover {
@@ -125,7 +127,7 @@ export default {
         padding: 0 10px;
         /* color: white; */
         background: white;
-        width: 100%;   
+        width: 100%;
     }
 
     #message-container {
@@ -135,4 +137,40 @@ export default {
     #message-container i {
         padding-top:11px;
     }
+
+    @media only screen and (max-width: 900px) {
+        .form {
+            padding: 30px 5%;
+        }
+        .input-container {
+            /* max-width: 50%; */
+            /* width: 100%; */
+            max-width: 100%;
+            min-width: 50%;
+        }
+
+        #submit-btn {
+            /* width: 50%; */
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        .form {
+            padding: 30px 5%;
+            /* width: 100%; */
+        }
+        
+        .input-container {
+            /* max-width: 50%; */
+            /* width: 100%; */
+            /* max-width: 100%; */
+            /* min-width: 50%; */
+        }
+
+        #submit-btn {
+            /* width: 50%; */
+        }
+    }
+
+
+    
 </style>

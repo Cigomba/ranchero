@@ -1,8 +1,10 @@
 <template>
-  <div class="about">
-    <!-- <img src="../assets/images/pexels-lukas-684385.jpg" id="img" alt=""> -->
-    <div class="banner">
-    </div>
+    <div class="about-container">
+      <div class="banner">
+      </div>
+      
+      <div class="about">
+        <!-- <img src="../assets/images/pexels-lukas-684385.jpg" id="img" alt=""> -->
     <h1>About RANCHERO PAINTING</h1>
     <div class="background">
       <h3>Background</h3>
@@ -22,13 +24,13 @@
       <h3>Values</h3>
       <p>We value hardwork, empathy, and quality. Hardwork gets the job done, empathy helps us relate and attend to the needs of our customers, and quality brings customer satisfaction.</p>
     </div>
-
+    
     <div class="">
       <h3>Follow us on social media for more!</h3>
       <SocialComponent />
     </div>
-
   </div>
+</div>
 </template>
 <script>
 import SocialComponent from '../components/SocialComponent.vue';
@@ -67,21 +69,24 @@ export default {
 .background {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;;
+  row-gap: 20px;
 }
 
 h1, h3, h6 {
   text-align: left;
-  padding: 20px 10%;
+  padding: 20px 0px;
 }
 
 p {
   text-align: left;
-  padding: 0px 10%;  
-  /* margin: 0px; */
+  /* padding: 0px 10%;   */
+  /* margin: 0px; */  
 }
 
+.about-container {
+  padding-bottom: 20%;
+}
 .about {
-  padding-bottom: 50%;
+  padding: 0px 10%;
 }
 </style>

@@ -18,13 +18,13 @@
 
 </script>
 
-<style scoped>
+<style scoped>  
 
 .container {
     display: flex;
     gap: 10px;
     /* padding: 0 10%; */
-    justify-content: space-evenly;
+    /* justify-content: space-between; */
 }
 .box {
     display: flex;
@@ -40,7 +40,8 @@
     border-radius: 10px;
     padding: 0 20px;
     /* background-color: grey; */
-    color: var(--purple);
+    background-color: var(--purple);
+    color: white;
 }
 .words {
     padding: 0 0 0 0px;
@@ -86,16 +87,20 @@ a {
 }
 
 
-@media screen and (width < 720px) {
+@media screen and (max-width: 720px) {
     .container {
-        display: flex;
+        display: inline-flex;
+        flex-wrap: wrap;
+        /* display: flex;
+
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
     }
 
     .btn {
-         width: 50%;
+        width: 50%;
+        min-width: fit-content;
     }
 
 }

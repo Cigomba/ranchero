@@ -2,9 +2,11 @@
   <div class="topheader">
     
   </div>
-  <header class=".header">
+  <header id="header">
     <router-link to="/">
-      <img src="./assets/images/RancheroPainting_Logo_Horizontal.png" id="img">
+      <div class="img_container">
+        <img src="./assets/logo_main.png" id="img">
+      </div>
     </router-link>
     <div class="menu-nav">
       <nav id="menu">
@@ -13,11 +15,10 @@
           &nbsp;<router-link :to="{ name : 'gallery' }">Gallery</router-link>
           &nbsp;<router-link :to="{ name : 'testimonials' }" >Testimonials</router-link>
           &nbsp;<router-link :to="{ name : 'contact-us' }" >Contact Us</router-link>
-      </nav>
-      <nav id="right-nav">
-              <a href="#" class="book-apt-btn" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cigombamiler-29w/30min'});return false;">Book an Appointment</a>
+        </nav>
+        <nav id="right-nav">
           &nbsp;<router-link :to="{ name : 'get-a-quote' }">
-              <button class="get-quote-btn btn" @mouseleave="setActivated" >Get a Quote</button>
+            <button class="get-quote-btn btn" @mouseleave="setActivated" >Get a Quote</button>
           </router-link>
         </nav>
     </div>
@@ -58,63 +59,87 @@ import FooterComponent from './components/FooterComponent.vue';
   --darker-blue: #39636F;
   --yellow: #ffc728;
   --main-blue: #2c3e50;
+  --this-green: #C3BF6D;
 }
+
+html {
+  font-size: 16px !important;
+}
+
 #app {
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
-  font-family: 'Inter', sans-serif;
-  /* font-family: 'Racing Sans One', sans-serif; */
+  /* font-family: 'Inter', sans-serif; */
+  font-family: 'Racing Sans One', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: relative;
 }
 
 * {
   margin: 0;
   padding: 0;
+  font-size: 12px !important;
+  box-sizing: border-box;
 }
 
-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 10px;
-  padding: 50px 50px;
-} 
+#header {
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  
+  overflow: hidden;
+  padding: 10px 0px;
+}
 
-#img {
+header .img_container {
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 0 10%;
+  /* padding-left: 50px; */
+}
+
+#header #img {
   /* border: 1px solid black; */
   /* object-fit: cover; */
   /* height: 100px !important; */
-  max-width: 250px;
+  max-width: 150px;
 }
 
 .menu-nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+  justify-content: space-between;
 }
 
 #menu {
   display: flex;
-  flex-wrap: wrap;
+  text-align: left;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: center;
   gap: 10px;
+  /* border: 1px solid green; */
 }
 
 #menu a {
   text-decoration: none;
-  font-size: 17px;
+  /* font-size: 16px; */
   text-transform: uppercase;
   color: var(--light-green);
+  white-space: nowrap;
 }
+
 
 #menu a:hover {
   color: var(--darker-blue);
   transition: all 300ms ease-in;
+  /* border-top: 1px solid var(--darker-blue); */
+  /* border-bottom: 1px solid var(--darker-blue); */
+}
+
+.router-link-active {
+  /* border-top: 1px solid var(--darker-blue);
+  border-bottom: 1px solid var(--darker-blue); */
 }
 
 .book-apt-btn {
@@ -137,12 +162,12 @@ a.book-apt-btn {
 .get-quote-btn {
   padding: 10px 20px;
   width: fit-content;
-  text-wrap: nowrap;
   font-size: 18px;
   background-color: var(--light-green);
   border-radius: 3px;
   color: white;
   border: none;
+  white-space: nowrap;
 }
 
 .get-quote-btn:hover {
@@ -175,6 +200,21 @@ a.router-link-exact-active:first-child {
 a.router-link-exact-active[href~=".get-quote-btn"] {
   background-color: var(--darker-blue);
   color: var(--yellow);
+
+}
+
+@media only screen and (max-width: 900px) {
+  #header {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+
+  .router-link-active
+  #header > a {
+    /* grid-column: 1 -1; */
+    /* border: 3px solid red; */
+  }
 
 }
 

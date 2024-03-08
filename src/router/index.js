@@ -70,8 +70,20 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+	history: createWebHistory(process.env.BASE_URL),
+	routes,
+	scrollBehavior(to, from, savedPosition) {
+		// window.scroll({ top: 0, left: 0, behavior: "smooth" });
+		// window.scrollTo(0, 0);
+
+		if (savedPosition) {
+			return savedPosition;
+		} else
+			return {
+				top: 0,
+				behavior: "smooth",
+			};
+	},
+});
 
 export default router

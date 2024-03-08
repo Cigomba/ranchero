@@ -1,6 +1,8 @@
 <template>
-    <div class="services-container">
+    <div class="all_container">
 
+        <div class="services-container">
+            
         <div class="services-service-main">
             <div class="services-service-card">
                 <div class="services-service-front">
@@ -119,8 +121,9 @@
             </div>
         </div>
     </div>
-<div>
-    <p>Visit our Facebook page for more information</p>
+    <div class="more-info">
+        <p>Visit our Facebook page for more information</p>
+    </div>
 </div>
 </template>
 <script>
@@ -129,6 +132,10 @@
 
 <style scoped>
 
+.all_container {
+    margin: 0 10%;
+}
+
 .services-container {
     display: flex;
     justify-content: center;
@@ -136,8 +143,8 @@
     text-align: center;
     gap: 30px;
     flex-wrap: wrap;
-    margin: 0 10%;
-    /* border: 1px solid black; */
+    border: 1px solid yellow;
+    padding: 50px 0px;
 }
 
 .services-service-main {
@@ -146,6 +153,8 @@
     height: 320px;
     /* background: green; */
 }
+
+
 
 .services-service-card {
     position: absolute;
@@ -199,6 +208,11 @@
 .services-service-back img {
     width: 100%;
 } 
+
+.more-info {
+    border: 1px solid saddlebrown;
+    text-align: left;
+}
 
 @media screen and (width <= 400) {
     .services-service-main {
