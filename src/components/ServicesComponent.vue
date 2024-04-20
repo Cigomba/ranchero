@@ -2,7 +2,7 @@
     <div class="all_container">
 
         <div class="services-container">
-            
+        
         <div class="services-service-main">
             <div class="services-service-card">
                 <div class="services-service-front">
@@ -138,13 +138,13 @@
 
 .services-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
     gap: 30px;
     flex-wrap: wrap;
     border: 1px solid yellow;
-    padding: 50px 0px;
+    /* padding: 50px 0px; */
 }
 
 .services-service-main {

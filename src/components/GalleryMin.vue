@@ -10,11 +10,11 @@
     </div> -->
     
     <div class="gallery-min">
-            <a href="../assets/images/WhatsApp Image 2022-05-04 at 6.25.18 PM.jpeg" class="img-container">
+            <a :href="require('/Users/Miler/Documents/Coding Projects/ranchero/src/assets/images/Screenshot 2022-07-18 161013_transparent.png')" class="img-container">
                 <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.18 PM.jpeg" id="img1" alt="">
             </a>
             <a href="../assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" class="img-container">
-                <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" id="img1" alt="">
+                <img src="@/assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" id="img1" alt="">
               </a>
             <a href="../assets/images/WhatsApp Image 2022-05-04 at 6.26.12 PM.jpeg" class="img-container">
               <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.26.12 PM.jpeg" id="img1" alt="">
@@ -36,46 +36,57 @@
             </a>
             <a href="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(3).jpeg" class="img-container last-img">
                 <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(3).jpeg" id="img1" alt="">
-              </a>
-              <div class="btn_div">
-                <!-- See more galleries  -->
-                <router-link id="more-btn" :to="{ name : 'gallery' }" >View more from galleries <i class="fa-solid fa-arrow-right"></i> </router-link>
-                <!-- <button id="more-btn">More Gallery <i class="fa-solid fa-arrow-right"></i></button> -->
-              </div>
+            </a>
+            <div class="btn_div">
+              <!-- See more galleries  -->
+              <router-link id="more-btn" :to="{ name : 'gallery' }" >View more from galleries <i class="fa-solid fa-arrow-right"></i> </router-link>
+              <!-- <button id="more-btn">More Gallery <i class="fa-solid fa-arrow-right"></i></button> -->
             </div>
+          </div>
 </template>
 
 <script lang="js">
 import SimpleLightbox from "simplelightbox";
+// import img from "../assets/images/Screenshot 2022-07-18 161013_transparent.png"
 
+export default {
+  name: "GalleryMin",
+  data () {
+    return { 
+      // img: require("../assets/images/Screenshot 2022-07-18 161013_transparent.png"),
+      // img
+    }
+    //   imgArr: [
+    //     {
 
-  let lightbox = new SimpleLightbox("a");
-  console.log(lightbox.elements);
-  // lightbox.open();
-  
+    //     }
+    //   ]
+    // }
+  },
+  mounted () {
+    let gallery = new SimpleLightbox(".gallery-min a");
+    console.log(gallery);
 
-  
-  export default {
-    name: "GalleryMin",
-    mounted () {
-        lightbox.on("show.simplelightbox", () => {
-          alert('clicked');
-          lightbox.open();
-        })
+    
+
+        // gallery.on("show.simplelightbox", () => {
+        //   alert('clicked');
+        //   gallery.open();
+        // })
        
-        lightbox.on("error.simplelightbox", (error) => {
-          console.log(error);
-          lightbox.close();
-          // lightbox.refresh();
-        })
+        // gallery.on("error.simplelightbox", (error) => {
+        //   console.log(error);
+        //   gallery.close();
+        //   // gallery.refresh();
+        // })
       
-        lightbox.on("next.simplelightbox", () => {
-          lightbox.next();
-        })
-        lightbox.on("prev.simplelightbox", () => {
-          lightbox.prev();
-        })
-
+        // gallery.on("next.simplelightbox", () => {
+        //   gallery.next();
+        // })
+        // gallery.on("prev.simplelightbox", () => {
+        //   gallery.prev();
+        // })
+        
     }
   }
 
@@ -84,8 +95,10 @@ import SimpleLightbox from "simplelightbox";
 <style scoped>
 
   img {
-    width: 280px;
-    height: 350px;
+    /* height: 350px; */
+    /* width: 1000px; */
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     object-position: center;
   }
@@ -93,8 +106,10 @@ import SimpleLightbox from "simplelightbox";
   .gallery-min {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    flex-wrap: wrap;
-    place-items: center;
+    /* place-items: center; */
+    /* justify-items: left; */
+    justify-items: center;
+    align-content: space-between;
     gap: 20px;
   }
 
@@ -105,30 +120,13 @@ import SimpleLightbox from "simplelightbox";
   border-radius: inherit;
   }
 
-  .last-img {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .last-img img:hover {
-    /* filter: brightness(30%); */
-    cursor: pointer;
-  }
-
-.last-img:hover {
-
-}
   .img-container {
     /* border: 10px solid salmon; */
   }
 
   .btn_div {
     display: inline-flex;
-    align-items: center;
-    justify-content: flex-end;
+    place-self: center;
     /* position: absolute; */
 
     /* margin-right: 10%; */

@@ -1,10 +1,10 @@
 <template>
-    <div class="review-container">
-        <div class="titles">
-            <h4 style="font-weight: 500;">Here's What Some of Our Customers Are Saying</h4>
-            <h6 style="font-weight: 200;">Customer Reviews</h6>
+    <div class="py-28 px-[10%]">
+        <div class="text-left text-l">
+            <h4 class="font-medium">Here's What Some of Our Customers Are Saying</h4>
+            <h6 class="font-extralight">Customer Reviews</h6>
         </div>
-        <div class="reviews-block">
+        <div class="mt-5 flex flex-col gap-52">
             <div class="review-block">
                 <img src="../assets/images/pexels-daniel-xavier-1239291.jpg" alt="">
                 <div class="review-titles">
@@ -47,23 +47,12 @@ img {
     object-fit: cover;
     object-position: center;
     border-radius: 5px;
-}
-
-.review-container {
-    padding: 90px 10%;
-}
-
-.reviews-block {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 200px;
-    /* border: 1px solid gray; */
-}
+}   
 
 .titles {
     text-align: left;
     /* width: 200px; */
+    font-size: larger;
 }
 
 .review-block {
