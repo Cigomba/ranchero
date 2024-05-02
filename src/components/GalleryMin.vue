@@ -49,7 +49,6 @@
 
 <script lang="js">
 import SimpleLightbox from "simplelightbox";
-// import img from "../assets/images/Screenshot 2022-07-18 161013_transparent.png"
 
 export default {
   name: "GalleryMin",
