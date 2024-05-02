@@ -10,7 +10,7 @@
     </div> -->
     
     <div class="gallery-min">
-            <a :href="require('/Users/Miler/Documents/Coding Projects/ranchero/src/assets/images/Screenshot 2022-07-18 161013_transparent.png')" class="img-container">
+            <a href="../assets/images/WhatsApp Image 2022-05-04 at 6.25.18 PM.jpeg" class="img-container">
                 <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.18 PM.jpeg" id="img1" alt="">
             </a>
             <a href="../assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" class="img-container">
