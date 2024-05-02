@@ -14,7 +14,7 @@
                 <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.18 PM.jpeg" id="img1" alt="">
             </a>
             <a href="../assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" class="img-container">
-                <img src="@/assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" id="img1" alt="">
+                <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.25.59 PM.jpeg" id="img1" alt="">
               </a>
             <a href="../assets/images/WhatsApp Image 2022-05-04 at 6.26.12 PM.jpeg" class="img-container">
               <img src="../assets/images/WhatsApp Image 2022-05-04 at 6.26.12 PM.jpeg" id="img1" alt="">
@@ -66,7 +66,7 @@ export default {
   },
   mounted () {
     let gallery = new SimpleLightbox(".gallery-min a");
-    // console.log(gallery);
+    console.log(gallery);
 
     
 
