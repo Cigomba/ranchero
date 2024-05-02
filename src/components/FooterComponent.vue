@@ -8,7 +8,7 @@
         <div class="inner-container">
 
             <div class="company">
-                <h6>Company</h6>
+                <h6 class="text-lg">Company</h6>
                 <div class="links">
                     <router-link :to="{ name : 'about-ranchero' }" class="first">About Ranchero</router-link>
                     <router-link :to="{ name : 'services' }">Services</router-link>
@@ -17,7 +17,7 @@
                 </div>
             </div>
         <div class="location">
-            <h6>Location</h6>
+            <h6 class="text-lg">Location</h6>
             <div class="location-info">
                 <p>(602) 123-4567</p>
                 <p>123 Sesame Street Phoenix, AZ 92105</p>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="connect">
-            <p class="connect-p">Connect with Ranchero:</p>
+            <p class="connect-p text-lg">Connect with Ranchero:</p>
             <div class="icons">
                 <a href="">
                     <i class="fa fa-facebook fa-3x"></i>
@@ -41,7 +41,7 @@
     </div>
     </div>
     <div class="bottom-footer">
-      <p>&copy; Copyright 2024 - Rancheropainting.com</p>
+      <p>2024 - rancheropainting.com</p>
       <div class="footer-rs">
         <a href="">Privacy Policy</a>
         <a href="">Terms and Conditions</a>
@@ -71,29 +71,21 @@ a {
 }
 
 
-.footer-container {
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    padding: 60px 10%;
-    text-align: left; */
-    
+.footer-container {    
     display: flex;
     flex-direction: column;
     align-items: center;
     color: black;
     background-color: #C3BF6D;
-    padding-bottom: 20px;
-    
-    /* border-top: 1px solid var(--light-blue); */
+    /* padding-bottom: 20px; */
+    padding: 30px;
 }
 
 .inner-container {
     display: flex;
     place-items: center;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-around;
+    gap: 50px;      
     flex-wrap: wrap;
     width: 100%;
     align-items: flex-start;
@@ -108,7 +100,8 @@ a {
 }
 
 .links a {
-    color: var(--main-blue);
+    /* color: var(--main-blue); */
+    color: var(--brown);
 }
 
 .links a:hover {
@@ -135,21 +128,35 @@ a {
 
 .icons a {
     text-decoration: none;
-    color: inherit;
-    /* color: var(--orange); */
-    color: none;
+    color: black;
+    /* color: transparent; */
 }
 
-.icons a:first-child:hover {
+.icons a:first-child {
     color: rgb(0, 106, 148);
 }
 
-.icons a:nth-child(2):hover {
+.icons a:nth-child(2) {
     color: rgb(237, 82, 82);
 }
 
-.icons a:nth-child(3):hover {
+.icons a:nth-child(3) {
     color: green;
+}
+.icons a:first-child:hover {
+    /* color: rgb(0, 106, 148); */
+    color: rgba(0, 106, 148, 0.50);
+    transition: color 0.2s ease;
+}
+
+.icons a:nth-child(2):hover {
+    color: rgba(237, 82, 82, 0.50);
+    transition: color 0.2s ease;
+}
+
+.icons a:nth-child(3):hover {
+    color: rgba(0, 128, 0, 0.50);
+    transition: color 0.2s ease;
 }
 
 .bottom-footer {
@@ -192,7 +199,7 @@ a {
     }
 
     .company, .location, .connect {
-        gap: 0px;
+        /* gap: 0px; */
     }
 }
 

@@ -37,11 +37,13 @@
             <a href="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(3).jpeg" class="img-container last-img">
                 <img src="../assets/images/WhatsApp Image 2022-07-18 at 4.51.46 PM(3).jpeg" id="img1" alt="">
             </a>
-            <div class="btn_div">
-              <!-- See more galleries  -->
-              <router-link id="more-btn" :to="{ name : 'gallery' }" >View more from galleries <i class="fa-solid fa-arrow-right"></i> </router-link>
+            <!-- See more galleries  -->
+            <router-link :to="{ name : 'gallery' }" class="h-fit self-center">
+            <div class="w-full flex gap-2.5 place-items-center rounded-md px-8 py-4 bg-[var(--purple)] whitespace-nowrap flex-wrap h-fit hover:cursor-pointer self-center text-xl">
+                View gallery <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </router-link>
               <!-- <button id="more-btn">More Gallery <i class="fa-solid fa-arrow-right"></i></button> -->
-            </div>
           </div>
 </template>
 
@@ -95,8 +97,8 @@ export default {
 <style scoped>
 
   img {
-    /* height: 350px; */
-    /* width: 1000px; */
+    /* height: 450px;
+    width: 1000px; */
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -113,11 +115,9 @@ export default {
     gap: 20px;
   }
 
-  .gallery-min > *:hover {
+  a > *:hover {
     box-shadow: 0px 0px 4px var(--this-green);
-  /* 0px 0px 4px var(--this-green); */
-  cursor: pointer;
-  border-radius: inherit;
+    cursor: pointer;
   }
 
   .img-container {
@@ -133,28 +133,6 @@ export default {
     /* width: fit-content; */
   }
 
-  #more-btn {
-    border: none;
-    border-radius: 10px;
-    /* top: 50%;
-    left: 28%; */
-    padding: 15px 30px;
-    font-size: 15px !important;
-    color: white;
-    background-color: var(--purple);
-    white-space: nowrap;
-    /* align-self: flex-end; */
-    /* background-color: var(--brown); */
-    /* align-self: center; */
-    justify-self: flex-end;
-    text-decoration: none;
-  }
-  
-  #more-btn:hover {
-    cursor: pointer;
-    /* transform: scale(1.2); */
-  }
-
   @media only screen and (max-width: 1120) { 
     
     .last-img {
@@ -164,9 +142,10 @@ export default {
 
 
 
-    #more-btn {
+    #more-btn a {
       position: absolute;
-      border: 1px solid grey;
+      border: 10px solid orange;
+
 
       /* align-self: flex-end; */
       /* background-color: var(--brown); */

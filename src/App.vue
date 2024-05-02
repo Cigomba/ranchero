@@ -2,7 +2,7 @@
   <div class="topheader">
     
   </div>
-  <header class="grid overflow-hidden px-0 py-2.5 lg:grid-cols-header-columns">
+  <header class="grid overflow-hidden px-0 py-2.5 lg:grid-cols-header-columns shadow-2xl">
     <router-link to="/">
       <div class="w-fit py-0.5 px-3">
         <img src="./assets/logo_main.png" class="w-48 min-w-36" />
