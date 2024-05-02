@@ -67,7 +67,7 @@ export default {
   },
   mounted () {
     let gallery = new SimpleLightbox(".gallery-min a");
-    console.log(gallery);
+    // console.log(gallery);
 
     
 
@@ -118,10 +118,6 @@ export default {
   a > *:hover {
     box-shadow: 0px 0px 4px var(--this-green);
     cursor: pointer;
-  }
-
-  .img-container {
-    /* border: 10px solid salmon; */
   }
 
   .btn_div {
