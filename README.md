@@ -1,24 +1,5 @@
 # ranchero
 
-## Project setup
-```
-npm install
-```
+Website prototype I built from "scratch" for a friend. Still needs a bit of work, but not too shabby. 
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Check out it out here:[https://ranchero.pages.dev/](https://ranchero.pages.dev/).
